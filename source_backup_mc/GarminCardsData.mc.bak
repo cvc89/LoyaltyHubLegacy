@@ -1,0 +1,399 @@
+using Toybox.Application;
+
+module GarminCardsData {
+
+    function loadCards() {
+        var cards = [];
+
+        for (var i = 1; i <= 20; i += 1) {
+            var index = formatIndex(i);
+            var card = parseCard(
+                getStringSetting("card" + index + "_store"),
+                getStringSetting("card" + index + "_code"),
+                getNumberSetting("card" + index + "_type"),
+                i
+            );
+
+            if (card != null) {
+                cards.add(card);
+            }
+        }
+
+        if (!hasQrCard(cards)) {
+            cards.add(buildDemoQrCard());
+            cards = moveLastCardToFront(cards);
+        }
+
+        return cards;
+    }
+
+    function parseCard(store, code, typeValue, index) {
+        var cleanStore = trimString(store);
+        var cleanCode = trimString(code);
+
+        if (isBlank(cleanStore) || isBlank(cleanCode)) {
+            return null;
+        }
+
+        var selectedType = typeFromValue(typeValue);
+        var resolvedType = resolveCodeType(cleanCode, selectedType);
+
+        return {
+            :title => cleanStore,
+            :code => cleanCode,
+            :codeType => resolvedType,
+            :merchant => cleanStore,
+            :category => "General",
+            :benefit => "Lista para mostrar en tu Fenix 7."
+        };
+    }
+
+    function buildDemoQrCard() {
+        return {
+            :title => "Example QR",
+            :code => "https://garnin.com",
+            :codeType => "QR",
+            :merchant => "Example QR",
+            :category => "General",
+            :benefit => "Demo QR visible on device."
+        };
+    }
+
+    function hasQrCard(cards) {
+        for (var i = 0; i < cards.size(); i += 1) {
+            if ((cards[i] has :codeType) && cards[i][:codeType] == "QR") {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    function moveLastCardToFront(cards) {
+        if (cards.size() <= 1) {
+            return cards;
+        }
+
+        var reordered = [];
+        reordered.add(cards[cards.size() - 1]);
+
+        for (var i = 0; i < cards.size() - 1; i += 1) {
+            reordered.add(cards[i]);
+        }
+
+        return reordered;
+    }
+
+    function getStringSetting(key) {
+        try {
+            var value = Application.Properties.getValue(key);
+            if (value == null) {
+                return "";
+            }
+
+            return value.toString();
+        } catch(e) {
+            return "";
+        }
+    }
+
+    function getNumberSetting(key) {
+        try {
+            var value = Application.Properties.getValue(key);
+            if (value == null) {
+                return 0;
+            }
+
+            return value.toNumber();
+        } catch(e) {
+            return 0;
+        }
+    }
+
+    function formatIndex(numberValue) {
+        if (numberValue < 10) {
+            return "0" + numberValue.toString();
+        }
+
+        return numberValue.toString();
+    }
+
+    function defaultString(value, fallback) {
+        if (isBlank(value)) {
+            return fallback;
+        }
+
+        return value;
+    }
+
+    function isBlank(value) {
+        return value == null || trimString(value.toString()).length() == 0;
+    }
+
+    function trimString(value) {
+        var start = 0;
+        var finish = value.length() - 1;
+
+        while (start < value.length() && isWhitespace(value.substring(start, start + 1))) {
+            start += 1;
+        }
+
+        while (finish >= start && isWhitespace(value.substring(finish, finish + 1))) {
+            finish -= 1;
+        }
+
+        if (finish < start) {
+            return "";
+        }
+
+        return value.substring(start, finish + 1);
+    }
+
+    function isWhitespace(ch) {
+        return ch == " " || ch == "\t" || ch == "\n" || ch == "\r";
+    }
+
+    function typeFromValue(value) {
+        if (value == 1) {
+            return "EAN8";
+        }
+
+        if (value == 2) {
+            return "UPCA";
+        }
+
+        if (value == 3) {
+            return "EAN13";
+        }
+
+        if (value == 4) {
+            return "ITF";
+        }
+
+        if (value == 5) {
+            return "CODE39";
+        }
+
+        if (value == 6) {
+            return "CODE128";
+        }
+
+        if (value == 7) {
+            return "QR";
+        }
+
+        return "";
+    }
+
+    function resolveCodeType(code, selectedType) {
+        var detectedType = detectCodeType(code);
+
+        if (isBlank(selectedType)) {
+            return detectedType;
+        }
+
+        if (isCompatibleWithType(code, selectedType)) {
+            return selectedType;
+        }
+
+        return detectedType;
+    }
+
+    function detectCodeType(code) {
+        var normalized = normalizeCode(code);
+        var length = normalized.length();
+
+        if (isLikelyQrContent(code)) {
+            return "QR";
+        }
+
+        if (isDigitsOnly(normalized)) {
+            if (length == 8) {
+                return "EAN8";
+            }
+
+            if (length == 12) {
+                return "UPCA";
+            }
+
+            if (length == 13) {
+                return "EAN13";
+            }
+
+            if ((length % 2) == 0 && length >= 14) {
+                return "ITF";
+            }
+        }
+
+        if (isCode39Compatible(normalized)) {
+            return "CODE39";
+        }
+
+        return "CODE128";
+    }
+
+    function isCompatibleWithType(code, codeType) {
+        var normalized = normalizeCode(code);
+        var length = normalized.length();
+
+        if (codeType == "EAN8") {
+            return isDigitsOnly(normalized) && length == 8;
+        }
+
+        if (codeType == "UPCA") {
+            return isDigitsOnly(normalized) && length == 12;
+        }
+
+        if (codeType == "EAN13") {
+            return isDigitsOnly(normalized) && length == 13;
+        }
+
+        if (codeType == "ITF") {
+            return isDigitsOnly(normalized) && length >= 14 && ((length % 2) == 0);
+        }
+
+        if (codeType == "CODE39") {
+            return isCode39Compatible(normalized);
+        }
+
+        if (codeType == "CODE128") {
+            return normalized.length() > 0;
+        }
+
+        if (codeType == "QR") {
+            return isQrCompatible(code);
+        }
+
+        return false;
+    }
+
+    function isQrCompatible(code) {
+        var value = trimString(code.toString());
+
+        if (value.length() == 0 || value.length() > 32) {
+            return false;
+        }
+
+        for (var i = 0; i < value.length(); i += 1) {
+            var ch = value.substring(i, i + 1);
+            var score = getAsciiValue(ch);
+            if (score < 32 || score > 126) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function isLikelyQrContent(code) {
+        var value = trimString(code.toString());
+        var lower = value.toLower();
+
+        if (!isQrCompatible(value)) {
+            return false;
+        }
+
+        if (startsWith(lower, "http://") || startsWith(lower, "https://")) {
+            return true;
+        }
+
+        if (containsString(value, "@") || containsString(value, "://")) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function normalizeCode(code) {
+        var value = code.toString();
+        var normalized = "";
+
+        for (var i = 0; i < value.length(); i += 1) {
+            var ch = value.substring(i, i + 1);
+            if (ch != " " && ch != "-") {
+                normalized += ch;
+            }
+        }
+
+        return normalized;
+    }
+
+    function isDigitsOnly(value) {
+        var digits = "0123456789";
+
+        for (var i = 0; i < value.length(); i += 1) {
+            var ch = value.substring(i, i + 1);
+            if (!containsChar(digits, ch)) {
+                return false;
+            }
+        }
+
+        return value.length() > 0;
+    }
+
+    function isCode39Compatible(value) {
+        if (value.length() == 0) {
+            return false;
+        }
+
+        var allowed = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%";
+        var upper = value.toUpper();
+
+        for (var i = 0; i < upper.length(); i += 1) {
+            var ch = upper.substring(i, i + 1);
+            if (!containsChar(allowed, ch)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function containsChar(haystack, needle) {
+        for (var i = 0; i < haystack.length(); i += 1) {
+            if (haystack.substring(i, i + 1) == needle) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    function containsString(haystack, needle) {
+        if (needle.length() == 0) {
+            return true;
+        }
+
+        if (haystack.length() < needle.length()) {
+            return false;
+        }
+
+        for (var i = 0; i <= (haystack.length() - needle.length()); i += 1) {
+            if (haystack.substring(i, i + needle.length()) == needle) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    function startsWith(value, prefix) {
+        if (value.length() < prefix.length()) {
+            return false;
+        }
+
+        return value.substring(0, prefix.length()) == prefix;
+    }
+
+    function getAsciiValue(ch) {
+        var ascii = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+
+        for (var i = 0; i < ascii.length(); i += 1) {
+            if (ascii.substring(i, i + 1) == ch) {
+                return i + 32;
+            }
+        }
+
+        return -1;
+    }
+}

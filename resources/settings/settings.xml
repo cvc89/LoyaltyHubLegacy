@@ -1,0 +1,33 @@
+<settings>
+    <setting propertyKey="@Properties.bulk_cards" title="Bulk Cards"><settingConfig type="alphaNumeric" maxLength="2048" /></setting>
+    <setting propertyKey="@Properties.card01_store" title="Store 01"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card01_value" title="Value 01"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card02_store" title="Store 02"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card02_value" title="Value 02"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card03_store" title="Store 03"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card03_value" title="Value 03"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card04_store" title="Store 04"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card04_value" title="Value 04"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card05_store" title="Store 05"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card05_value" title="Value 05"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card06_store" title="Store 06"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card06_value" title="Value 06"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card07_store" title="Store 07"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card07_value" title="Value 07"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card08_store" title="Store 08"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card08_value" title="Value 08"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card09_store" title="Store 09"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card09_value" title="Value 09"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card10_store" title="Store 10"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card10_value" title="Value 10"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card11_store" title="Store 11"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card11_value" title="Value 11"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card12_store" title="Store 12"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card12_value" title="Value 12"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card13_store" title="Store 13"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card13_value" title="Value 13"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card14_store" title="Store 14"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card14_value" title="Value 14"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+    <setting propertyKey="@Properties.card15_store" title="Store 15"><settingConfig type="alphaNumeric" maxLength="64" /></setting>
+    <setting propertyKey="@Properties.card15_value" title="Value 15"><settingConfig type="alphaNumeric" maxLength="255" /></setting>
+</settings>

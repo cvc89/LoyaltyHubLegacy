@@ -1,0 +1,28 @@
+using Toybox.Application;
+using Toybox.WatchUi;
+
+class GarminCardsApp extends Application.AppBase {
+
+    public function initialize() {
+        AppBase.initialize();
+    }
+
+    public function onStart(state) {
+    }
+
+    public function onStop(state) {
+    }
+
+    public function getInitialView() {
+        var view = new GarminCardsView();
+        return [view, new GarminCardsDelegate(view)];
+    }
+
+    public function getGlanceView() {
+        return [new GarminCardsGlanceView()];
+    }
+}
+
+function getApp() {
+    return Application.getApp();
+}

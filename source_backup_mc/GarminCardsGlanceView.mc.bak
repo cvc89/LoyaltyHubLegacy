@@ -1,0 +1,119 @@
+using Toybox.Graphics;
+using Toybox.WatchUi;
+
+class GarminCardsGlanceView extends WatchUi.GlanceView {
+
+    public function initialize() {
+        GlanceView.initialize();
+    }
+
+    public function onUpdate(dc) {
+        var width = dc.getWidth();
+        var height = dc.getHeight();
+        var cards = GarminCardsData.loadCards();
+        var count = cards.size();
+        var headlineFont = pickHeadlineFont(height);
+        var detailFont = pickDetailFont(height);
+        var centerY = height / 2;
+        var lineGap = 4;
+        var headlineHeight = dc.getFontHeight(headlineFont);
+        var detailHeight = dc.getFontHeight(detailFont);
+        var topY = centerY - ((headlineHeight + lineGap + detailHeight) / 2);
+        var maxTextWidth = width - 16;
+        var colorPair = pickGlanceColors(cards, count);
+        var backgroundColor = colorPair[:background];
+        var textColor = colorPair[:text];
+
+        dc.setColor(backgroundColor, backgroundColor);
+        dc.clear();
+        dc.setColor(textColor, backgroundColor);
+
+        if (count == 0) {
+            dc.drawText(
+                width / 2,
+                centerY - (headlineHeight / 2),
+                headlineFont,
+                fitText(dc, "Garmin Cards", headlineFont, maxTextWidth),
+                Graphics.TEXT_JUSTIFY_CENTER
+            );
+            return;
+        }
+
+        var firstCard = cards[0];
+        var headline = count.toString() + " cards";
+        var detail = firstCard[:title];
+
+        dc.drawText(
+            width / 2,
+            topY,
+            headlineFont,
+            fitText(dc, headline, headlineFont, maxTextWidth),
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+        dc.drawText(
+            width / 2,
+            topY + headlineHeight + lineGap,
+            detailFont,
+            fitText(dc, detail, detailFont, maxTextWidth),
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+    }
+
+    private function pickGlanceColors(cards, count) {
+        var palette = [
+            { :background => Graphics.COLOR_BLUE, :text => Graphics.COLOR_WHITE },
+            { :background => Graphics.COLOR_GREEN, :text => Graphics.COLOR_BLACK },
+            { :background => Graphics.COLOR_RED, :text => Graphics.COLOR_WHITE },
+            { :background => Graphics.COLOR_YELLOW, :text => Graphics.COLOR_BLACK },
+            { :background => Graphics.COLOR_DK_GRAY, :text => Graphics.COLOR_WHITE },
+            { :background => Graphics.COLOR_LT_GRAY, :text => Graphics.COLOR_BLACK }
+        ];
+
+        if (count == 0) {
+            return palette[0];
+        }
+
+        var firstCard = cards[0];
+        var seed = count + firstCard[:title].length() + firstCard[:code].length();
+        return palette[seed % palette.size()];
+    }
+
+    private function pickHeadlineFont(height) {
+        if (height < 64) {
+            return Graphics.FONT_XTINY;
+        }
+
+        if (height < 90) {
+            return Graphics.FONT_TINY;
+        }
+
+        return Graphics.FONT_SMALL;
+    }
+
+    private function pickDetailFont(height) {
+        if (height < 90) {
+            return Graphics.FONT_XTINY;
+        }
+
+        return Graphics.FONT_TINY;
+    }
+
+    private function fitText(dc, text, font, maxWidth) {
+        if (dc.getTextWidthInPixels(text, font) <= maxWidth) {
+            return text;
+        }
+
+        var ellipsis = "...";
+        var truncated = text;
+
+        while (truncated.length() > 0) {
+            truncated = truncated.substring(0, truncated.length() - 1);
+            var candidate = truncated + ellipsis;
+            if (dc.getTextWidthInPixels(candidate, font) <= maxWidth) {
+                return candidate;
+            }
+        }
+
+        return ellipsis;
+    }
+}

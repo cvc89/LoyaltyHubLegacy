@@ -1,0 +1,13 @@
+<drawables>
+    <bitmap id="ExampleQr" filename="example_qr.png" />
+    <bitmap id="IconOk" filename="icon_ok.png" />
+    <bitmap id="LauncherIcon" filename="icon_ok.png" />
+    <bitmap id="MiniWidgetPic" filename="miniwidget_pic.png" />
+    <bitmap id="MiniWidgetCenter" filename="miniwidget_center.png" />
+    <bitmap id="Mini240_72" filename="mini240_72.png" />
+    <bitmap id="Mini320_76" filename="mini320_76.png" />
+    <bitmap id="MiniWidgetPicFull" filename="miniwidget_pic_full.png" />
+    <bitmap id="MiniFondo240_72" filename="mini_fondo_240_72.png" />
+    <bitmap id="MiniFondo320_76" filename="mini_fondo_320_76.png" />
+    <bitmap id="MiniFondo360_89" filename="mini_fondo_360_89.png" />
+</drawables>

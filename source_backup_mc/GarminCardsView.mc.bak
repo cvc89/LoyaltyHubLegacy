@@ -1,0 +1,475 @@
+using Toybox.Graphics;
+using Toybox.Attention;
+using Toybox.WatchUi;
+
+class GarminCardsView extends WatchUi.View {
+
+    private var _cards;
+    private var _currentIndex = 0;
+    private var _isBrightnessMax = false;
+
+    public function initialize() {
+        View.initialize();
+        reloadCards();
+    }
+
+    public function nextCard() {
+        if (_cards.size() == 0) {
+            return;
+        }
+
+        _currentIndex = (_currentIndex + 1) % _cards.size();
+        WatchUi.requestUpdate();
+    }
+
+    public function previousCard() {
+        if (_cards.size() == 0) {
+            return;
+        }
+
+        _currentIndex = (_currentIndex + _cards.size() - 1) % _cards.size();
+        WatchUi.requestUpdate();
+    }
+
+    public function toggleMode() {
+        _isBrightnessMax = !_isBrightnessMax;
+        applyBrightnessState();
+        WatchUi.requestUpdate();
+    }
+
+    public function onUpdate(dc) {
+        reloadCards();
+
+        var width = dc.getWidth();
+        var height = dc.getHeight();
+
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.clear();
+
+        if (_cards.size() == 0) {
+            drawFrame(dc, width, height);
+            drawHeader(dc, width, false);
+            drawEmptyState(dc, width, height);
+            drawFooter(dc, width, height);
+            return;
+        }
+
+        var card = _cards[_currentIndex];
+        var isQrCard = shouldRenderAsQr(card, getCardCodeType(card));
+
+        drawFrame(dc, width, height);
+        drawHeader(dc, width, isQrCard);
+        drawCodeCard(dc, width, height, card);
+
+        drawFooter(dc, width, height);
+    }
+
+    private function reloadCards() {
+        _cards = GarminCardsData.loadCards();
+
+        if (_cards.size() == 0) {
+            _currentIndex = 0;
+        } else if (_currentIndex >= _cards.size()) {
+            _currentIndex = 0;
+        }
+    }
+
+    private function drawFrame(dc, width, height) {
+        var insetOuter = width / 30;
+        var insetInner = insetOuter + (width / 65);
+
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.drawRectangle(insetOuter, insetOuter, width - (insetOuter * 2), height - (insetOuter * 2));
+        dc.drawRectangle(insetInner, insetInner, width - (insetInner * 2), height - (insetInner * 2));
+    }
+
+    private function drawHeader(dc, width, isQrCard) {
+        var font = Graphics.FONT_XTINY;
+        var y = 12 + (dc.getFontHeight(font) / 2);
+        var title = "GARMIN CARDS";
+
+        if (isQrCard) {
+            title = "QR TEST";
+        }
+
+        dc.setColor(getAccentColor(1), Graphics.COLOR_BLACK);
+        dc.drawText(width / 2, y, font, fitText(dc, title, font, width - 28), Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    private function drawEmptyState(dc, width, height) {
+        var titleFont = pickTitleFont(width, height);
+        var bodyFont = pickBodyFont(height);
+        var top = height * 0.30;
+        var gap = 4;
+        var bodyY = top + dc.getFontHeight(titleFont) + 8;
+        var maxWidth = width * 0.70;
+
+        dc.setColor(getAccentColor(2), Graphics.COLOR_BLACK);
+        dc.drawText(width / 2, top, titleFont, fitText(dc, "Sin tarjetas", titleFont, maxWidth), Graphics.TEXT_JUSTIFY_CENTER);
+
+        dc.setColor(getAccentColor(3), Graphics.COLOR_BLACK);
+        dc.drawText(width / 2, bodyY, bodyFont, fitText(dc, "Configuralas desde", bodyFont, maxWidth), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width / 2, bodyY + dc.getFontHeight(bodyFont) + gap, bodyFont, fitText(dc, "Garmin Connect IQ", bodyFont, maxWidth), Graphics.TEXT_JUSTIFY_CENTER);
+
+        dc.setColor(getAccentColor(4), Graphics.COLOR_BLACK);
+        dc.drawText(width / 2, height * 0.64, bodyFont, fitText(dc, "Campos: Store", bodyFont, maxWidth), Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width / 2, (height * 0.64) + dc.getFontHeight(bodyFont) + gap, bodyFont, fitText(dc, "Code y Type", bodyFont, maxWidth), Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    private function drawCodeCard(dc, width, height, card) {
+        var titleFont = pickBodyFont(height);
+        var metaFont = Graphics.FONT_XTINY;
+        var topTextY = height * 0.20;
+        var barcodeSideInset = getBarcodeInset(width, height);
+        var barcodeTop = height * 0.32;
+        var codeType = getCardCodeType(card);
+        var showAsQr = shouldRenderAsQr(card, codeType);
+        var barcodeHeight = getCodeVisualHeight(height, codeType);
+        var barcodeWidth = width - (barcodeSideInset * 2);
+        var codeY = barcodeTop + barcodeHeight + maxValue(8, height / 30);
+
+        dc.setColor(getAccentColor(card[:merchant].length() + 1), Graphics.COLOR_BLACK);
+        dc.drawText(width / 2, topTextY, titleFont, fitText(dc, card[:merchant], titleFont, width - (barcodeSideInset * 2)), Graphics.TEXT_JUSTIFY_CENTER);
+
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.fillRectangle(toInt(barcodeSideInset), toInt(barcodeTop), toInt(barcodeWidth), toInt(barcodeHeight));
+
+        if (showAsQr) {
+            drawQrArea(dc, width, height, card, barcodeSideInset, barcodeTop, barcodeWidth, barcodeHeight, metaFont);
+        } else {
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
+            drawBarcode(dc, barcodeSideInset, barcodeTop, barcodeWidth, barcodeHeight, card[:code]);
+        }
+
+        dc.setColor(getAccentColor(card[:code].length() + 3), Graphics.COLOR_BLACK);
+        dc.drawText(width / 2, codeY, metaFont, fitText(dc, card[:code], metaFont, width - (barcodeSideInset * 2)), Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    private function drawFooter(dc, width, height) {
+        var footerFont = Graphics.FONT_XTINY;
+        var progress = "0/0";
+        if (_cards.size() > 0) {
+            progress = (_currentIndex + 1).toString() + "/" + _cards.size().toString();
+        }
+
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.drawText(width / 2, height * 0.92, footerFont, progress, Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    private function getCardCodeType(card) {
+        if ((card has :codeType) && !GarminCardsData.isBlank(card[:codeType])) {
+            return card[:codeType];
+        }
+
+        return GarminCardsData.detectCodeType(card[:code]);
+    }
+
+    private function pickTitleFont(width, height) {
+        if (width < 190 || height < 190) {
+            return Graphics.FONT_MEDIUM;
+        }
+
+        return Graphics.FONT_LARGE;
+    }
+
+    private function pickBodyFont(height) {
+        if (height < 190) {
+            return Graphics.FONT_XTINY;
+        }
+
+        return Graphics.FONT_TINY;
+    }
+
+    private function fitText(dc, text, font, maxWidth) {
+        if (dc.getTextWidthInPixels(text, font) <= maxWidth) {
+            return text;
+        }
+
+        var ellipsis = "...";
+        var truncated = text;
+
+        while (truncated.length() > 0) {
+            truncated = truncated.substring(0, truncated.length() - 1);
+            if (dc.getTextWidthInPixels(truncated + ellipsis, font) <= maxWidth) {
+                return truncated + ellipsis;
+            }
+        }
+
+        return ellipsis;
+    }
+
+    private function getAccentColor(seed) {
+        var palette = [
+            Graphics.COLOR_BLUE,
+            Graphics.COLOR_GREEN,
+            Graphics.COLOR_DK_GRAY,
+            Graphics.COLOR_LT_GRAY,
+            Graphics.COLOR_WHITE,
+            Graphics.COLOR_YELLOW,
+            Graphics.COLOR_RED
+        ];
+
+        return palette[seed % palette.size()];
+    }
+
+    private function drawBarcode(dc, left, top, maxWidth, barHeight, code) {
+        var normalized = buildBarcodeSeed(code);
+        var pattern = buildBarcodePattern(normalized);
+        var totalUnits = 0;
+
+        for (var i = 0; i < pattern.size(); i += 1) {
+            totalUnits += pattern[i];
+        }
+
+        if (totalUnits <= 0) {
+            return;
+        }
+
+        var availableWidth = maxValue(20, toInt(maxWidth));
+        var unitWidth = availableWidth / totalUnits;
+        if (unitWidth < 2) {
+            unitWidth = 2;
+        }
+
+        var barcodeWidth = totalUnits * unitWidth;
+        if (barcodeWidth > availableWidth) {
+            unitWidth = maxValue(1, availableWidth / totalUnits);
+            barcodeWidth = totalUnits * unitWidth;
+        }
+
+        if (barcodeWidth > availableWidth) {
+            barcodeWidth = availableWidth;
+        }
+
+        var startX = toInt(left + ((maxWidth - barcodeWidth) / 2));
+        var currentX = startX;
+        var bottom = toInt(top + barHeight);
+        var drawBar = true;
+
+        for (var j = 0; j < pattern.size(); j += 1) {
+            var segmentWidth = pattern[j] * unitWidth;
+            if ((currentX + segmentWidth) > (startX + barcodeWidth)) {
+                segmentWidth = (startX + barcodeWidth) - currentX;
+            }
+
+            if (segmentWidth <= 0) {
+                break;
+            }
+
+            if (drawBar) {
+                drawBarBlock(dc, currentX, toInt(top), maxValue(1, segmentWidth), bottom);
+            }
+
+            currentX += segmentWidth;
+            drawBar = !drawBar;
+        }
+    }
+
+    private function buildBarcodeSeed(code) {
+        var raw = code.toString();
+        var seed = "";
+
+        for (var i = 0; i < raw.length(); i += 1) {
+            var ch = raw.substring(i, i + 1);
+            if (ch != " ") {
+                seed += ch;
+            }
+        }
+
+        if (seed.length() == 0) {
+            return "0000";
+        }
+
+        return seed;
+    }
+
+    private function buildBarcodePattern(seed) {
+        var pattern = [2, 1, 2, 1, 1, 2];
+        var maxChars = minValue(seed.length(), 12);
+
+        for (var i = 0; i < maxChars; i += 1) {
+            var codeValue = getCharScore(seed.substring(i, i + 1));
+            pattern.add((codeValue % 4) + 1);
+            pattern.add((codeValue % 3) + 1);
+        }
+
+        pattern.add(2);
+        pattern.add(1);
+        pattern.add(3);
+        pattern.add(1);
+        return pattern;
+    }
+
+    private function getCharScore(ch) {
+        var alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%abcdefghijklmnopqrstuvwxyz";
+
+        for (var i = 0; i < alphabet.length(); i += 1) {
+            if (alphabet.substring(i, i + 1) == ch) {
+                return i + 1;
+            }
+        }
+
+        return 7;
+    }
+
+    private function drawBarBlock(dc, x, top, width, bottom) {
+        for (var dx = 0; dx < width; dx += 1) {
+            dc.drawLine(x + dx, top, x + dx, bottom);
+        }
+    }
+
+    private function maxValue(a, b) {
+        if (a > b) {
+            return a;
+        }
+
+        return b;
+    }
+
+    private function getBarcodeInset(width, height) {
+        var inset = width / 14;
+
+        if (width < 220 || height < 220) {
+            inset = width / 12;
+        }
+
+        return toInt(maxValue(10, inset));
+    }
+
+    private function getCodeVisualHeight(height, codeType) {
+        if (codeType == "QR") {
+            var qrHeight = height * 0.34;
+            return toInt(maxValue(74, qrHeight));
+        }
+
+        var barcodeHeight = height * 0.22;
+
+        if (height >= 260) {
+            barcodeHeight = height * 0.25;
+        }
+
+        return toInt(maxValue(32, barcodeHeight));
+    }
+
+    private function shouldRenderAsQr(card, codeType) {
+        if (codeType == "QR") {
+            return true;
+        }
+
+        if ((card has :codeType) && card[:codeType] == "QR") {
+            return true;
+        }
+
+        if (GarminCardsData.isLikelyQrContent(card[:code])) {
+            return true;
+        }
+
+        if ((card has :merchant) && containsText(card[:merchant].toString().toUpper(), "QR")) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private function drawQrArea(dc, width, height, card, left, top, maxWidth, maxHeight, metaFont) {
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
+        drawQrDiagnosticBlock(dc, left, top, maxWidth, maxHeight);
+        drawQrDebugBadge(dc, left, top, maxWidth);
+    }
+
+    private function drawQrFallback(dc, width, top, maxHeight, font) {
+        var centerY = top + (maxHeight / 2) - (dc.getFontHeight(font) / 2);
+        var helpY = centerY + dc.getFontHeight(font) + 4;
+
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
+        dc.drawText(width / 2, centerY, font, "QR demasiado largo", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width / 2, helpY, font, "Usa 32 chars o menos", Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    private function drawQrDiagnosticBlock(dc, left, top, maxWidth, maxHeight) {
+        var squareSize = minValue(toInt(maxWidth), toInt(maxHeight));
+        var startX = toInt(left + ((maxWidth - squareSize) / 2));
+        var startY = toInt(top + ((maxHeight - squareSize) / 2));
+        var moduleSize = maxValue(8, toInt(squareSize / 7));
+        var drawSize = moduleSize * 7;
+        var offsetX = startX + toInt((squareSize - drawSize) / 2);
+        var offsetY = startY + toInt((squareSize - drawSize) / 2);
+
+        for (var y = 0; y < 7; y += 1) {
+            for (var x = 0; x < 7; x += 1) {
+                if (((x + y) % 2) == 0 || x == 0 || y == 0 || x == 6 || y == 6) {
+                    dc.fillRectangle(offsetX + (x * moduleSize), offsetY + (y * moduleSize), moduleSize, moduleSize);
+                }
+            }
+        }
+    }
+
+    private function drawQrDebugBadge(dc, left, top, maxWidth) {
+        var badgeWidth = maxValue(30, toInt(maxWidth / 4));
+        var badgeHeight = 14;
+        var badgeX = toInt(left + ((maxWidth - badgeWidth) / 2));
+        var badgeY = toInt(top - 18);
+
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.fillRectangle(badgeX, badgeY, badgeWidth, badgeHeight);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
+        dc.drawText(badgeX + (badgeWidth / 2), badgeY + 1, Graphics.FONT_XTINY, "QR", Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    private function containsText(value, needle) {
+        if (needle.length() == 0) {
+            return true;
+        }
+
+        if (value.length() < needle.length()) {
+            return false;
+        }
+
+        for (var i = 0; i <= (value.length() - needle.length()); i += 1) {
+            if (value.substring(i, i + needle.length()) == needle) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private function applyBrightnessState() {
+        if (!(Attention has :backlight)) {
+            _isBrightnessMax = false;
+            return;
+        }
+
+        try {
+            if (_isBrightnessMax) {
+                Attention.backlight(1.0);
+            } else {
+                Attention.backlight(0.0);
+            }
+        } catch(e) {
+            try {
+                Attention.backlight(_isBrightnessMax);
+            } catch(inner) {
+                _isBrightnessMax = false;
+            }
+        }
+    }
+
+    private function minValue(a, b) {
+        if (a < b) {
+            return a;
+        }
+
+        return b;
+    }
+
+    public function onHide() {
+        _isBrightnessMax = false;
+        applyBrightnessState();
+        View.onHide();
+    }
+
+    private function toInt(value) {
+        return value.toNumber();
+    }
+}
