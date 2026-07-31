@@ -1828,14 +1828,6 @@ class GarminCardsView extends WatchUi.View {
     }
 
     private function asciiByteForChar(ch) {
-        try {
-            var value = ch.toCharArray()[0].toNumber();
-            if (value >= 32 && value <= 126) {
-                return value;
-            }
-        } catch(e) {
-        }
-
         return GarminCardsData.getAsciiValue(ch);
     }
 

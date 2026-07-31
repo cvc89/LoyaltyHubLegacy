@@ -1,0 +1,55 @@
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [ExampleQr,9,27,36]; @symbol_type<0> = [ResourceId,9,40,50]; ]
+        var ExampleQr as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 10; @position = 27; initialized = true; @symbol_vardef = [IconOk,10,27,33]; @symbol_type<0> = [ResourceId,10,37,47]; ]
+        var IconOk as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 11; @position = 27; initialized = true; @symbol_vardef = [MiniWidgetPic,11,27,40]; @symbol_type<0> = [ResourceId,11,44,54]; ]
+        var MiniWidgetPic as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 12; @position = 27; initialized = true; @symbol_vardef = [MiniWidgetCenter,12,27,43]; @symbol_type<0> = [ResourceId,12,47,57]; ]
+        var MiniWidgetCenter as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [Mini240_72,13,27,37]; @symbol_type<0> = [ResourceId,13,41,51]; ]
+        var Mini240_72 as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; @symbol_vardef = [Mini320_76,14,27,37]; @symbol_type<0> = [ResourceId,14,41,51]; ]
+        var Mini320_76 as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; @symbol_vardef = [MiniWidgetPicFull,15,27,44]; @symbol_type<0> = [ResourceId,15,48,58]; ]
+        var MiniWidgetPicFull as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 16; @position = 27; initialized = true; @symbol_vardef = [MiniFondo240_72,16,27,42]; @symbol_type<0> = [ResourceId,16,46,56]; ]
+        var MiniFondo240_72 as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 17; @position = 27; initialized = true; @symbol_vardef = [MiniFondo320_76,17,27,42]; @symbol_type<0> = [ResourceId,17,46,56]; ]
+        var MiniFondo320_76 as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 18; @position = 27; initialized = true; @symbol_vardef = [MiniFondo360_89,18,27,42]; @symbol_type<0> = [ResourceId,18,46,56]; ]
+        var MiniFondo360_89 as ResourceId;
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 19; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,19,27,39]; @symbol_type<0> = [ResourceId,19,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 22; @symbol_moduledef = [Strings,22,11,18]; ]
+    module Strings {
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 22; ]
+        <init> {
+        }
+        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 23; @position = 27; initialized = true; @symbol_vardef = [AppName,23,27,34]; @symbol_type<0> = [ResourceId,23,38,48]; ]
+        var AppName as ResourceId;
+    }
+}
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}
