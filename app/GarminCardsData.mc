@@ -683,18 +683,6 @@ module GarminCardsData {
     function getAsciiValue(ch) {
         var key = ch.toString();
 
-        if (key.length() == 1) {
-            try {
-                var code = key.toCharArray()[0].toNumber();
-                if (code >= 32 && code <= 126) {
-                    _asciiCacheChars.add(key);
-                    _asciiCacheValues.add(code);
-                    return code;
-                }
-            } catch(e) {
-            }
-        }
-
         for (var cacheIndex = 0; cacheIndex < _asciiCacheChars.size(); cacheIndex += 1) {
             if (stringEquals(_asciiCacheChars[cacheIndex], key)) {
                 return _asciiCacheValues[cacheIndex];

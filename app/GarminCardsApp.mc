@@ -18,9 +18,6 @@ class GarminCardsApp extends Application.AppBase {
         return [introView, new GarminCardsIntroDelegate(introView)];
     }
 
-    public function getGlanceView() {
-        return [new GarminCardsGlanceView()];
-    }
 }
 
 function getApp() {
