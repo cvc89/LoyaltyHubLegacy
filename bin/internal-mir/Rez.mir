@@ -1,55 +1,1556 @@
-[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+[ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
 import Toybox.Lang;
-[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+[ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
 using Toybox.WatchUi;
-[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+[ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
 using Toybox.WatchUi as :Ui;
-[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+[ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
 using Toybox.Graphics;
-[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+[ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
 using Toybox.Graphics as :Gfx;
-[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+[ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
 module Rez {
-    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 7; ]
+    [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 7; ]
     <init> {
     }
-    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
     module Drawables {
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 8; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 8; ]
         <init> {
         }
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [ExampleQr,9,27,36]; @symbol_type<0> = [ResourceId,9,40,50]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [ExampleQr,9,27,36]; @symbol_type<0> = [ResourceId,9,40,50]; ]
         var ExampleQr as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 10; @position = 27; initialized = true; @symbol_vardef = [IconOk,10,27,33]; @symbol_type<0> = [ResourceId,10,37,47]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 10; @position = 27; initialized = true; @symbol_vardef = [IconOk,10,27,33]; @symbol_type<0> = [ResourceId,10,37,47]; ]
         var IconOk as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 11; @position = 27; initialized = true; @symbol_vardef = [MiniWidgetPic,11,27,40]; @symbol_type<0> = [ResourceId,11,44,54]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 11; @position = 27; initialized = true; @symbol_vardef = [MiniWidgetPic,11,27,40]; @symbol_type<0> = [ResourceId,11,44,54]; ]
         var MiniWidgetPic as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 12; @position = 27; initialized = true; @symbol_vardef = [MiniWidgetCenter,12,27,43]; @symbol_type<0> = [ResourceId,12,47,57]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 12; @position = 27; initialized = true; @symbol_vardef = [MiniWidgetCenter,12,27,43]; @symbol_type<0> = [ResourceId,12,47,57]; ]
         var MiniWidgetCenter as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [Mini240_72,13,27,37]; @symbol_type<0> = [ResourceId,13,41,51]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [Mini240_72,13,27,37]; @symbol_type<0> = [ResourceId,13,41,51]; ]
         var Mini240_72 as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; @symbol_vardef = [Mini320_76,14,27,37]; @symbol_type<0> = [ResourceId,14,41,51]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; @symbol_vardef = [Mini320_76,14,27,37]; @symbol_type<0> = [ResourceId,14,41,51]; ]
         var Mini320_76 as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; @symbol_vardef = [MiniWidgetPicFull,15,27,44]; @symbol_type<0> = [ResourceId,15,48,58]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; @symbol_vardef = [MiniWidgetPicFull,15,27,44]; @symbol_type<0> = [ResourceId,15,48,58]; ]
         var MiniWidgetPicFull as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 16; @position = 27; initialized = true; @symbol_vardef = [MiniFondo240_72,16,27,42]; @symbol_type<0> = [ResourceId,16,46,56]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 16; @position = 27; initialized = true; @symbol_vardef = [MiniFondo240_72,16,27,42]; @symbol_type<0> = [ResourceId,16,46,56]; ]
         var MiniFondo240_72 as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 17; @position = 27; initialized = true; @symbol_vardef = [MiniFondo320_76,17,27,42]; @symbol_type<0> = [ResourceId,17,46,56]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 17; @position = 27; initialized = true; @symbol_vardef = [MiniFondo320_76,17,27,42]; @symbol_type<0> = [ResourceId,17,46,56]; ]
         var MiniFondo320_76 as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 18; @position = 27; initialized = true; @symbol_vardef = [MiniFondo360_89,18,27,42]; @symbol_type<0> = [ResourceId,18,46,56]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 18; @position = 27; initialized = true; @symbol_vardef = [MiniFondo360_89,18,27,42]; @symbol_type<0> = [ResourceId,18,46,56]; ]
         var MiniFondo360_89 as ResourceId;
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 19; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,19,27,39]; @symbol_type<0> = [ResourceId,19,43,53]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 19; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,19,27,39]; @symbol_type<0> = [ResourceId,19,43,53]; ]
         var LauncherIcon as ResourceId;
     }
-    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 22; @symbol_moduledef = [Strings,22,11,18]; ]
+    [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 22; @symbol_moduledef = [Strings,22,11,18]; ]
     module Strings {
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 22; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 22; ]
         <init> {
         }
-        [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 23; @position = 27; initialized = true; @symbol_vardef = [AppName,23,27,34]; @symbol_type<0> = [ResourceId,23,38,48]; ]
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 23; @position = 27; initialized = true; @symbol_vardef = [AppName,23,27,34]; @symbol_type<0> = [ResourceId,23,38,48]; ]
         var AppName as ResourceId;
     }
+    [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 26; @symbol_moduledef = [Styles,26,11,17]; ]
+    module Styles {
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 26; ]
+        <init> {
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 27; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,27,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 27; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 28; @position = 18; @symbol_constdef = [exclude,28,18,25]; @symbol_type<0> = [Boolean,28,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 31; @symbol_moduledef = [system_size__menu_header,31,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 31; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 32; @position = 18; @symbol_constdef = [width,32,18,23]; @symbol_type<0> = [Number,32,27,33]; ]
+            const width as Number = 390;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 33; @position = 18; @symbol_constdef = [height,33,18,24]; @symbol_type<0> = [Number,33,28,34]; ]
+            const height as Number = 152;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 36; @symbol_moduledef = [system_loc__hint_button_left_bottom,36,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 36; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 37; @position = 18; @symbol_constdef = [exclude,37,18,25]; @symbol_type<0> = [Boolean,37,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 40; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,40,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 40; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 41; @position = 18; @symbol_constdef = [exclude,41,18,25]; @symbol_type<0> = [Boolean,41,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 44; @symbol_moduledef = [prompt_loc__body_no_title,44,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 44; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 45; @position = 18; @symbol_constdef = [x,45,18,19]; @symbol_type<0> = [Number,45,23,29]; ]
+            const x as Number = 40;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 46; @position = 18; @symbol_constdef = [y,46,18,19]; @symbol_type<0> = [Number,46,23,29]; ]
+            const y as Number = 95;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 49; @symbol_moduledef = [system_icon_dark__about,49,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 49; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 50; @position = 18; @symbol_constdef = [filename,50,18,26]; @symbol_type<0> = [String,50,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__about.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 51; @position = 18; @symbol_constdef = [compress,51,18,26]; @symbol_type<0> = [String,51,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 52; @position = 18; @symbol_constdef = [dithering,52,18,27]; @symbol_type<0> = [String,52,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 53; @position = 18; @symbol_constdef = [automaticPalette,53,18,34]; @symbol_type<0> = [String,53,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 54; @position = 18; @symbol_constdef = [packingFormat,54,18,31]; @symbol_type<0> = [String,54,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 57; @symbol_moduledef = [system_icon_light__question,57,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 57; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 58; @position = 18; @symbol_constdef = [filename,58,18,26]; @symbol_type<0> = [String,58,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__question.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 59; @position = 18; @symbol_constdef = [compress,59,18,26]; @symbol_type<0> = [String,59,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 60; @position = 18; @symbol_constdef = [dithering,60,18,27]; @symbol_type<0> = [String,60,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 61; @position = 18; @symbol_constdef = [automaticPalette,61,18,34]; @symbol_type<0> = [String,61,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [packingFormat,62,18,31]; @symbol_type<0> = [String,62,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 65; @symbol_moduledef = [system_loc__hint_button_left_top,65,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 65; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 66; @position = 18; @symbol_constdef = [exclude,66,18,25]; @symbol_type<0> = [Boolean,66,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 69; @symbol_moduledef = [prompt_font__title,69,15,33]; ]
+        module prompt_font__title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 69; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 70 18 ]
+                symbol [ Graphics %tmp.1 70 34 42 ];
+                %tmp.1 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.2 70 43 62 ];
+                %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.3 70 63 71 ];
+                %tmp.3 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.4 70 72 92 ];
+                %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_VCENTER;
+                %tmp.5 = bitor %tmp.2 %tmp.4;
+                putv self :justification %tmp.5;
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 71 18 ]
+                symbol [ Graphics %tmp.6 71 25 33 ];
+                %tmp.6 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.7 71 34 44 ];
+                %tmp.7 = getv %tmp.6 :FONT_XTINY;
+                putv self :font %tmp.7;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 70; @position = 18; @symbol_constdef = [justification,70,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 71; @position = 18; @symbol_constdef = [font,71,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 74; @symbol_moduledef = [system_icon_dark__discard,74,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 75; @position = 18; @symbol_constdef = [filename,75,18,26]; @symbol_type<0> = [String,75,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__discard.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 76; @position = 18; @symbol_constdef = [compress,76,18,26]; @symbol_type<0> = [String,76,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 77; @position = 18; @symbol_constdef = [dithering,77,18,27]; @symbol_type<0> = [String,77,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 78; @position = 18; @symbol_constdef = [automaticPalette,78,18,34]; @symbol_type<0> = [String,78,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [packingFormat,79,18,31]; @symbol_type<0> = [String,79,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 82; @symbol_moduledef = [system_size__menu_item,82,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 82; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [width,83,18,23]; @symbol_type<0> = [Number,83,27,33]; ]
+            const width as Number = 390;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [height,84,18,24]; @symbol_type<0> = [Number,84,28,34]; ]
+            const height as Number = 108;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 87; @symbol_moduledef = [system_color_dark__text,87,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 87; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 89 18 ]
+                symbol [ Graphics %tmp.8 89 31 39 ];
+                %tmp.8 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.9 89 40 57 ];
+                %tmp.9 = getv %tmp.8 :COLOR_TRANSPARENT;
+                putv self :background %tmp.9;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [color,88,18,23]; @symbol_type<0> = [Number,88,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [background,89,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 92; @symbol_moduledef = [system_icon_destructive__discard,92,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 92; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [filename,93,18,26]; @symbol_type<0> = [String,93,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_destructive__discard.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 94; @position = 18; @symbol_constdef = [dithering,94,18,27]; @symbol_type<0> = [String,94,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 95; @position = 18; @symbol_constdef = [packingFormat,95,18,31]; @symbol_type<0> = [String,95,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 98; @symbol_moduledef = [system_icon_dark__hint_action_menu,98,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 98; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 99; @position = 18; @symbol_constdef = [filename,99,18,26]; @symbol_type<0> = [String,99,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__hint_action_menu.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [dithering,100,18,27]; @symbol_type<0> = [String,100,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 101; @position = 18; @symbol_constdef = [packingFormat,101,18,31]; @symbol_type<0> = [String,101,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 104; @symbol_moduledef = [prompt_size__title,104,15,33]; ]
+        module prompt_size__title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 104; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 105; @position = 18; @symbol_constdef = [width,105,18,23]; @symbol_type<0> = [Number,105,27,33]; ]
+            const width as Number = 272;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 106; @position = 18; @symbol_constdef = [height,106,18,24]; @symbol_type<0> = [Number,106,28,34]; ]
+            const height as Number = 70;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 109; @symbol_moduledef = [confirmation_font__body,109,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 109; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 110 18 ]
+                symbol [ Graphics %tmp.10 110 34 42 ];
+                %tmp.10 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.11 110 43 62 ];
+                %tmp.11 = getv %tmp.10 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.12 110 63 71 ];
+                %tmp.12 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.13 110 72 92 ];
+                %tmp.13 = getv %tmp.12 :TEXT_JUSTIFY_VCENTER;
+                %tmp.14 = bitor %tmp.11 %tmp.13;
+                putv self :justification %tmp.14;
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 111 18 ]
+                symbol [ Graphics %tmp.15 111 25 33 ];
+                %tmp.15 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.16 111 34 43 ];
+                %tmp.16 = getv %tmp.15 :FONT_TINY;
+                putv self :font %tmp.16;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 110; @position = 18; @symbol_constdef = [justification,110,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 111; @position = 18; @symbol_constdef = [font,111,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 114; @symbol_moduledef = [system_color_dark__background,114,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 114; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 115; @position = 18; @symbol_constdef = [color,115,18,23]; @symbol_type<0> = [Number,115,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [background,116,18,28]; @symbol_type<0> = [Number,116,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 119; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,119,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 119; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 120; @position = 18; @symbol_constdef = [exclude,120,18,25]; @symbol_type<0> = [Boolean,120,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 123; @symbol_moduledef = [system_size__launch_icon,123,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 123; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 124; @position = 18; @symbol_constdef = [scaleX,124,18,24]; @symbol_type<0> = [Number,124,28,34]; ]
+            const scaleX as Number = 60;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [scaleY,125,18,24]; @symbol_type<0> = [Number,125,28,34]; ]
+            const scaleY as Number = 60;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 126; @position = 18; @symbol_constdef = [scaleRelativeTo,126,18,33]; @symbol_type<0> = [String,126,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 129; @symbol_moduledef = [confirmation_input__confirm,129,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 129; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 130; @position = 18; @symbol_constdef = [y1,130,18,20]; @symbol_type<0> = [Number,130,24,30]; ]
+            const y1 as Number = 310;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 131; @position = 18; @symbol_constdef = [x1,131,18,20]; @symbol_type<0> = [Number,131,24,30]; ]
+            const x1 as Number = 25;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 132; @position = 18; @symbol_constdef = [y2,132,18,20]; @symbol_type<0> = [Number,132,24,30]; ]
+            const y2 as Number = 390;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 133; @position = 18; @symbol_constdef = [x2,133,18,20]; @symbol_type<0> = [Number,133,24,30]; ]
+            const x2 as Number = 265;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 136; @symbol_moduledef = [prompt_font__body_with_title,136,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 136; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 137 18 ]
+                symbol [ Graphics %tmp.17 137 34 42 ];
+                %tmp.17 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.18 137 43 62 ];
+                %tmp.18 = getv %tmp.17 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.18;
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 138 18 ]
+                symbol [ Graphics %tmp.19 138 25 33 ];
+                %tmp.19 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.20 138 34 43 ];
+                %tmp.20 = getv %tmp.19 :FONT_TINY;
+                putv self :font %tmp.20;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 137; @position = 18; @symbol_constdef = [justification,137,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 138; @position = 18; @symbol_constdef = [font,138,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 141; @symbol_moduledef = [confirmation_loc__body,141,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 141; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 142; @position = 18; @symbol_constdef = [x,142,18,19]; @symbol_type<0> = [Number,142,23,29]; ]
+            const x as Number = 40;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [y,143,18,19]; @symbol_type<0> = [Number,143,23,29]; ]
+            const y as Number = 95;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 146; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,146,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [exclude,147,18,25]; @symbol_type<0> = [Boolean,147,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 150; @symbol_moduledef = [prompt_color_dark__background,150,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 150; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 151; @position = 18; @symbol_constdef = [color,151,18,23]; @symbol_type<0> = [Number,151,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 152; @position = 18; @symbol_constdef = [background,152,18,28]; @symbol_type<0> = [Number,152,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 155; @symbol_moduledef = [system_icon_destructive__hint_action_menu,155,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 155; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 156; @position = 18; @symbol_constdef = [filename,156,18,26]; @symbol_type<0> = [String,156,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_destructive__hint_action_menu.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 157; @position = 18; @symbol_constdef = [dithering,157,18,27]; @symbol_type<0> = [String,157,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [packingFormat,158,18,31]; @symbol_type<0> = [String,158,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 161; @symbol_moduledef = [system_loc__hint_action_menu,161,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 161; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 162; @position = 18; @symbol_constdef = [x,162,18,19]; @symbol_type<0> = [Number,162,23,29]; ]
+            const x as Number = 336;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 163; @position = 18; @symbol_constdef = [y,163,18,19]; @symbol_type<0> = [Number,163,23,29]; ]
+            const y as Number = 74;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 166; @symbol_moduledef = [confirmation_icon__hint_confirm,166,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 166; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 167; @position = 18; @symbol_constdef = [filename,167,18,26]; @symbol_type<0> = [String,167,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [dithering,168,18,27]; @symbol_type<0> = [String,168,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [packingFormat,169,18,31]; @symbol_type<0> = [String,169,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 172; @symbol_moduledef = [system_loc__hint_button_left_middle,172,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 172; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 173; @position = 18; @symbol_constdef = [exclude,173,18,25]; @symbol_type<0> = [Boolean,173,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 176; @symbol_moduledef = [prompt_size__body_no_title,176,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 176; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 177; @position = 18; @symbol_constdef = [width,177,18,23]; @symbol_type<0> = [Number,177,27,33]; ]
+            const width as Number = 310;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 178; @position = 18; @symbol_constdef = [height,178,18,24]; @symbol_type<0> = [Number,178,28,34]; ]
+            const height as Number = 211;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 181; @symbol_moduledef = [system_icon_light__hint_button_left_top,181,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 181; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 182; @position = 18; @symbol_constdef = [exclude,182,18,25]; @symbol_type<0> = [Boolean,182,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 185; @symbol_moduledef = [prompt_color_light__background,185,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 185; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 186; @position = 18; @symbol_constdef = [color,186,18,23]; @symbol_type<0> = [Number,186,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 187; @position = 18; @symbol_constdef = [background,187,18,28]; @symbol_type<0> = [Number,187,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 190; @symbol_moduledef = [confirmation_input__delete,190,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 190; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 191; @position = 18; @symbol_constdef = [y1,191,18,20]; @symbol_type<0> = [Number,191,24,30]; ]
+            const y1 as Number = 0;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 192; @position = 18; @symbol_constdef = [x1,192,18,20]; @symbol_type<0> = [Number,192,24,30]; ]
+            const x1 as Number = 25;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 193; @position = 18; @symbol_constdef = [y2,193,18,20]; @symbol_type<0> = [Number,193,24,30]; ]
+            const y2 as Number = 83;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 194; @position = 18; @symbol_constdef = [x2,194,18,20]; @symbol_type<0> = [Number,194,24,30]; ]
+            const x2 as Number = 265;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 197; @symbol_moduledef = [system_icon_dark__hint_button_left_top,197,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 197; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 198; @position = 18; @symbol_constdef = [exclude,198,18,25]; @symbol_type<0> = [Boolean,198,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 201; @symbol_moduledef = [system_input__action_menu,201,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 201; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 202 18 ]
+                symbol [ WatchUi %tmp.21 202 27 34 ];
+                %tmp.21 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.22 202 35 44 ];
+                %tmp.22 = getv %tmp.21 :KEY_ENTER;
+                putv self :button %tmp.22;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 202; @position = 18; @symbol_constdef = [button,202,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 205; @symbol_moduledef = [system_icon_light__save,205,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 205; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 206; @position = 18; @symbol_constdef = [filename,206,18,26]; @symbol_type<0> = [String,206,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__save.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 207; @position = 18; @symbol_constdef = [compress,207,18,26]; @symbol_type<0> = [String,207,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 208; @position = 18; @symbol_constdef = [dithering,208,18,27]; @symbol_type<0> = [String,208,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 209; @position = 18; @symbol_constdef = [automaticPalette,209,18,34]; @symbol_type<0> = [String,209,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 210; @position = 18; @symbol_constdef = [packingFormat,210,18,31]; @symbol_type<0> = [String,210,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 213; @symbol_moduledef = [prompt_color_light__body,213,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 213; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 215 18 ]
+                symbol [ Graphics %tmp.23 215 31 39 ];
+                %tmp.23 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.24 215 40 57 ];
+                %tmp.24 = getv %tmp.23 :COLOR_TRANSPARENT;
+                putv self :background %tmp.24;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 214; @position = 18; @symbol_constdef = [color,214,18,23]; @symbol_type<0> = [Number,214,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 215; @position = 18; @symbol_constdef = [background,215,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 218; @symbol_moduledef = [system_loc__subwindow,218,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 218; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 219; @position = 18; @symbol_constdef = [exclude,219,18,25]; @symbol_type<0> = [Boolean,219,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 222; @symbol_moduledef = [system_icon_light__warning,222,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 222; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 223; @position = 18; @symbol_constdef = [filename,223,18,26]; @symbol_type<0> = [String,223,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__warning.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 224; @position = 18; @symbol_constdef = [compress,224,18,26]; @symbol_type<0> = [String,224,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 225; @position = 18; @symbol_constdef = [dithering,225,18,27]; @symbol_type<0> = [String,225,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [automaticPalette,226,18,34]; @symbol_type<0> = [String,226,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [packingFormat,227,18,31]; @symbol_type<0> = [String,227,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 230; @symbol_moduledef = [confirmation_color_light__body,230,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 230; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 232 18 ]
+                symbol [ Graphics %tmp.25 232 31 39 ];
+                %tmp.25 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.26 232 40 57 ];
+                %tmp.26 = getv %tmp.25 :COLOR_TRANSPARENT;
+                putv self :background %tmp.26;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 231; @position = 18; @symbol_constdef = [color,231,18,23]; @symbol_type<0> = [Number,231,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 232; @position = 18; @symbol_constdef = [background,232,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 235; @symbol_moduledef = [confirmation_icon_light__hint_keep,235,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 235; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 236; @position = 18; @symbol_constdef = [filename,236,18,26]; @symbol_type<0> = [String,236,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 237; @position = 18; @symbol_constdef = [dithering,237,18,27]; @symbol_type<0> = [String,237,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 238; @position = 18; @symbol_constdef = [packingFormat,238,18,31]; @symbol_type<0> = [String,238,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 241; @symbol_moduledef = [activity_color_light__background,241,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 241; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 242; @position = 18; @symbol_constdef = [color,242,18,23]; @symbol_type<0> = [Number,242,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 243; @position = 18; @symbol_constdef = [background,243,18,28]; @symbol_type<0> = [Number,243,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 246; @symbol_moduledef = [system_icon_positive__hint_button_right_top,246,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 246; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 247; @position = 18; @symbol_constdef = [filename,247,18,26]; @symbol_type<0> = [String,247,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 248; @position = 18; @symbol_constdef = [dithering,248,18,27]; @symbol_type<0> = [String,248,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 251; @symbol_moduledef = [system_size__screen,251,15,34]; ]
+        module system_size__screen {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 251; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 252; @position = 18; @symbol_constdef = [width,252,18,23]; @symbol_type<0> = [Number,252,27,33]; ]
+            const width as Number = 390;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 253; @position = 18; @symbol_constdef = [height,253,18,24]; @symbol_type<0> = [Number,253,28,34]; ]
+            const height as Number = 390;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 256; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,256,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 256; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 257; @position = 18; @symbol_constdef = [filename,257,18,26]; @symbol_type<0> = [String,257,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 258; @position = 18; @symbol_constdef = [dithering,258,18,27]; @symbol_type<0> = [String,258,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 261; @symbol_moduledef = [system_color_light__background,261,15,45]; ]
+        module system_color_light__background {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 261; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 262; @position = 18; @symbol_constdef = [color,262,18,23]; @symbol_type<0> = [Number,262,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 263; @position = 18; @symbol_constdef = [background,263,18,28]; @symbol_type<0> = [Number,263,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 266; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,266,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 266; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 267; @position = 18; @symbol_constdef = [filename,267,18,26]; @symbol_type<0> = [String,267,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 268; @position = 18; @symbol_constdef = [dithering,268,18,27]; @symbol_type<0> = [String,268,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 271; @symbol_moduledef = [confirmation_loc__hint_confirm,271,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 271; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 272; @position = 18; @symbol_constdef = [x,272,18,19]; @symbol_type<0> = [Number,272,23,29]; ]
+            const x as Number = 195;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 273; @position = 18; @symbol_constdef = [horizontalJustification,273,18,41]; @symbol_type<0> = [String,273,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 274; @position = 18; @symbol_constdef = [y,274,18,19]; @symbol_type<0> = [Number,274,23,29]; ]
+            const y as Number = 310;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 277; @symbol_moduledef = [activity_color_dark__text,277,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 277; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 279 18 ]
+                symbol [ Graphics %tmp.27 279 31 39 ];
+                %tmp.27 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.28 279 40 57 ];
+                %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+                putv self :background %tmp.28;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 278; @position = 18; @symbol_constdef = [color,278,18,23]; @symbol_type<0> = [Number,278,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 279; @position = 18; @symbol_constdef = [background,279,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 282; @symbol_moduledef = [confirmation_input__keep,282,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 282; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 283; @position = 18; @symbol_constdef = [y1,283,18,20]; @symbol_type<0> = [Number,283,24,30]; ]
+            const y1 as Number = 310;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 284; @position = 18; @symbol_constdef = [x1,284,18,20]; @symbol_type<0> = [Number,284,24,30]; ]
+            const x1 as Number = 41;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 285; @position = 18; @symbol_constdef = [y2,285,18,20]; @symbol_type<0> = [Number,285,24,30]; ]
+            const y2 as Number = 390;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 286; @position = 18; @symbol_constdef = [x2,286,18,20]; @symbol_type<0> = [Number,286,24,30]; ]
+            const x2 as Number = 249;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 289; @symbol_moduledef = [prompt_loc__body_with_title,289,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 289; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 290; @position = 18; @symbol_constdef = [x,290,18,19]; @symbol_type<0> = [Number,290,23,29]; ]
+            const x as Number = 40;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 291; @position = 18; @symbol_constdef = [y,291,18,19]; @symbol_type<0> = [Number,291,23,29]; ]
+            const y as Number = 139;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 294; @symbol_moduledef = [system_icon_dark__search,294,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 294; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 295; @position = 18; @symbol_constdef = [filename,295,18,26]; @symbol_type<0> = [String,295,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__search.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 296; @position = 18; @symbol_constdef = [compress,296,18,26]; @symbol_type<0> = [String,296,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 297; @position = 18; @symbol_constdef = [dithering,297,18,27]; @symbol_type<0> = [String,297,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 298; @position = 18; @symbol_constdef = [automaticPalette,298,18,34]; @symbol_type<0> = [String,298,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [packingFormat,299,18,31]; @symbol_type<0> = [String,299,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 302; @symbol_moduledef = [activity_color_light__text,302,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 302; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 304 18 ]
+                symbol [ Graphics %tmp.29 304 31 39 ];
+                %tmp.29 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.30 304 40 57 ];
+                %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+                putv self :background %tmp.30;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 303; @position = 18; @symbol_constdef = [color,303,18,23]; @symbol_type<0> = [Number,303,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 304; @position = 18; @symbol_constdef = [background,304,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 307; @symbol_moduledef = [confirmation_icon__hint_keep,307,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 307; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 308; @position = 18; @symbol_constdef = [filename,308,18,26]; @symbol_type<0> = [String,308,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 309; @position = 18; @symbol_constdef = [dithering,309,18,27]; @symbol_type<0> = [String,309,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 310; @position = 18; @symbol_constdef = [packingFormat,310,18,31]; @symbol_type<0> = [String,310,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 313; @symbol_moduledef = [system_icon_dark__save,313,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 313; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 314; @position = 18; @symbol_constdef = [filename,314,18,26]; @symbol_type<0> = [String,314,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__save.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 315; @position = 18; @symbol_constdef = [compress,315,18,26]; @symbol_type<0> = [String,315,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 316; @position = 18; @symbol_constdef = [dithering,316,18,27]; @symbol_type<0> = [String,316,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 317; @position = 18; @symbol_constdef = [automaticPalette,317,18,34]; @symbol_type<0> = [String,317,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [packingFormat,318,18,31]; @symbol_type<0> = [String,318,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 321; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,321,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 321; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 322; @position = 18; @symbol_constdef = [exclude,322,18,25]; @symbol_type<0> = [Boolean,322,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 325; @symbol_moduledef = [system_icon_light__search,325,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 325; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 326; @position = 18; @symbol_constdef = [filename,326,18,26]; @symbol_type<0> = [String,326,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__search.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 327; @position = 18; @symbol_constdef = [compress,327,18,26]; @symbol_type<0> = [String,327,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 328; @position = 18; @symbol_constdef = [dithering,328,18,27]; @symbol_type<0> = [String,328,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [automaticPalette,329,18,34]; @symbol_type<0> = [String,329,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 330; @position = 18; @symbol_constdef = [packingFormat,330,18,31]; @symbol_type<0> = [String,330,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 333; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,333,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 333; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 334; @position = 18; @symbol_constdef = [exclude,334,18,25]; @symbol_type<0> = [Boolean,334,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 337; @symbol_moduledef = [system_icon_positive__hint_button_left_top,337,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 337; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 338; @position = 18; @symbol_constdef = [exclude,338,18,25]; @symbol_type<0> = [Boolean,338,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 341; @symbol_moduledef = [system_loc__hint_button_right_bottom,341,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 341; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 342; @position = 18; @symbol_constdef = [x,342,18,19]; @symbol_type<0> = [Number,342,23,29]; ]
+            const x as Number = 337;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 343; @position = 18; @symbol_constdef = [y,343,18,19]; @symbol_type<0> = [Number,343,23,29]; ]
+            const y as Number = 259;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 346; @symbol_moduledef = [confirmation_icon_dark__hint_reject,346,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 346; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 347; @position = 18; @symbol_constdef = [filename,347,18,26]; @symbol_type<0> = [String,347,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 348; @position = 18; @symbol_constdef = [dithering,348,18,27]; @symbol_type<0> = [String,348,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [packingFormat,349,18,31]; @symbol_type<0> = [String,349,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 352; @symbol_moduledef = [confirmation_color_dark__body,352,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 352; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 354 18 ]
+                symbol [ Graphics %tmp.31 354 31 39 ];
+                %tmp.31 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.32 354 40 57 ];
+                %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+                putv self :background %tmp.32;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 353; @position = 18; @symbol_constdef = [color,353,18,23]; @symbol_type<0> = [Number,353,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 354; @position = 18; @symbol_constdef = [background,354,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 357; @symbol_moduledef = [confirmation_icon_light__hint_confirm,357,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 357; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 358; @position = 18; @symbol_constdef = [filename,358,18,26]; @symbol_type<0> = [String,358,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 359; @position = 18; @symbol_constdef = [dithering,359,18,27]; @symbol_type<0> = [String,359,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 360; @position = 18; @symbol_constdef = [packingFormat,360,18,31]; @symbol_type<0> = [String,360,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 363; @symbol_moduledef = [prompt_color_dark__title,363,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 363; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 365 18 ]
+                symbol [ Graphics %tmp.33 365 31 39 ];
+                %tmp.33 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.34 365 40 57 ];
+                %tmp.34 = getv %tmp.33 :COLOR_TRANSPARENT;
+                putv self :background %tmp.34;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 364; @position = 18; @symbol_constdef = [color,364,18,23]; @symbol_type<0> = [Number,364,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 365; @position = 18; @symbol_constdef = [background,365,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 368; @symbol_moduledef = [system_icon_destructive__cancel,368,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 368; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 369; @position = 18; @symbol_constdef = [filename,369,18,26]; @symbol_type<0> = [String,369,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_destructive__cancel.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 370; @position = 18; @symbol_constdef = [dithering,370,18,27]; @symbol_type<0> = [String,370,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 371; @position = 18; @symbol_constdef = [packingFormat,371,18,31]; @symbol_type<0> = [String,371,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 374; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,374,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 374; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 375; @position = 18; @symbol_constdef = [filename,375,18,26]; @symbol_type<0> = [String,375,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 376; @position = 18; @symbol_constdef = [dithering,376,18,27]; @symbol_type<0> = [String,376,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 379; @symbol_moduledef = [prompt_loc__title,379,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 379; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 380; @position = 18; @symbol_constdef = [x,380,18,19]; @symbol_type<0> = [Number,380,23,29]; ]
+            const x as Number = 59;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 381; @position = 18; @symbol_constdef = [y,381,18,19]; @symbol_type<0> = [Number,381,23,29]; ]
+            const y as Number = 78;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 384; @symbol_moduledef = [confirmation_font_enhanced_readability__body,384,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 384; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 385; @position = 18; @symbol_constdef = [exclude,385,18,25]; @symbol_type<0> = [Boolean,385,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 388; @symbol_moduledef = [prompt_color_light__title,388,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 388; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 390 18 ]
+                symbol [ Graphics %tmp.35 390 31 39 ];
+                %tmp.35 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.36 390 40 57 ];
+                %tmp.36 = getv %tmp.35 :COLOR_TRANSPARENT;
+                putv self :background %tmp.36;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 389; @position = 18; @symbol_constdef = [color,389,18,23]; @symbol_type<0> = [Number,389,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 390; @position = 18; @symbol_constdef = [background,390,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 393; @symbol_moduledef = [system_icon_dark__hint_button_right_top,393,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 393; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 394; @position = 18; @symbol_constdef = [filename,394,18,26]; @symbol_type<0> = [String,394,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 395; @position = 18; @symbol_constdef = [dithering,395,18,27]; @symbol_type<0> = [String,395,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 398; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,398,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 398; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 399; @position = 18; @symbol_constdef = [exclude,399,18,25]; @symbol_type<0> = [Boolean,399,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 402; @symbol_moduledef = [confirmation_icon_dark__hint_keep,402,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 402; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 403; @position = 18; @symbol_constdef = [filename,403,18,26]; @symbol_type<0> = [String,403,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 404; @position = 18; @symbol_constdef = [dithering,404,18,27]; @symbol_type<0> = [String,404,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 405; @position = 18; @symbol_constdef = [packingFormat,405,18,31]; @symbol_type<0> = [String,405,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 408; @symbol_moduledef = [system_icon_light__cancel,408,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 408; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 409; @position = 18; @symbol_constdef = [filename,409,18,26]; @symbol_type<0> = [String,409,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__cancel.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 410; @position = 18; @symbol_constdef = [compress,410,18,26]; @symbol_type<0> = [String,410,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 411; @position = 18; @symbol_constdef = [dithering,411,18,27]; @symbol_type<0> = [String,411,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 412; @position = 18; @symbol_constdef = [automaticPalette,412,18,34]; @symbol_type<0> = [String,412,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 413; @position = 18; @symbol_constdef = [packingFormat,413,18,31]; @symbol_type<0> = [String,413,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 416; @symbol_moduledef = [confirmation_icon_light__hint_reject,416,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 416; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 417; @position = 18; @symbol_constdef = [filename,417,18,26]; @symbol_type<0> = [String,417,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 418; @position = 18; @symbol_constdef = [dithering,418,18,27]; @symbol_type<0> = [String,418,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 419; @position = 18; @symbol_constdef = [packingFormat,419,18,31]; @symbol_type<0> = [String,419,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 422; @symbol_moduledef = [system_icon_light__about,422,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 422; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 423; @position = 18; @symbol_constdef = [filename,423,18,26]; @symbol_type<0> = [String,423,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__about.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 424; @position = 18; @symbol_constdef = [compress,424,18,26]; @symbol_type<0> = [String,424,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 425; @position = 18; @symbol_constdef = [dithering,425,18,27]; @symbol_type<0> = [String,425,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 426; @position = 18; @symbol_constdef = [automaticPalette,426,18,34]; @symbol_type<0> = [String,426,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 427; @position = 18; @symbol_constdef = [packingFormat,427,18,31]; @symbol_type<0> = [String,427,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 430; @symbol_moduledef = [system_size__toast_icon,430,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 430; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 431; @position = 18; @symbol_constdef = [scaleX,431,18,24]; @symbol_type<0> = [Number,431,28,34]; ]
+            const scaleX as Number = 38;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 432; @position = 18; @symbol_constdef = [scaleY,432,18,24]; @symbol_type<0> = [Number,432,28,34]; ]
+            const scaleY as Number = 38;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 433; @position = 18; @symbol_constdef = [scaleRelativeTo,433,18,33]; @symbol_type<0> = [String,433,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 436; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,436,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 436; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 437; @position = 18; @symbol_constdef = [filename,437,18,26]; @symbol_type<0> = [String,437,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__hint_button_right_middle.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 438; @position = 18; @symbol_constdef = [dithering,438,18,27]; @symbol_type<0> = [String,438,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 441; @symbol_moduledef = [confirmation_icon__hint_reject,441,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 441; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 442; @position = 18; @symbol_constdef = [filename,442,18,26]; @symbol_type<0> = [String,442,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 443; @position = 18; @symbol_constdef = [dithering,443,18,27]; @symbol_type<0> = [String,443,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 444; @position = 18; @symbol_constdef = [packingFormat,444,18,31]; @symbol_type<0> = [String,444,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 447; @symbol_moduledef = [system_icon_light__hint_action_menu,447,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 447; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [filename,448,18,26]; @symbol_type<0> = [String,448,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__hint_action_menu.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 449; @position = 18; @symbol_constdef = [dithering,449,18,27]; @symbol_type<0> = [String,449,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 450; @position = 18; @symbol_constdef = [packingFormat,450,18,31]; @symbol_type<0> = [String,450,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 453; @symbol_moduledef = [system_icon_light__hint_button_right_middle,453,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 453; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 454; @position = 18; @symbol_constdef = [filename,454,18,26]; @symbol_type<0> = [String,454,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__hint_button_right_middle.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 455; @position = 18; @symbol_constdef = [dithering,455,18,27]; @symbol_type<0> = [String,455,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 458; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,458,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 458; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 459; @position = 18; @symbol_constdef = [filename,459,18,26]; @symbol_type<0> = [String,459,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_destructive__hint_button_right_middle.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 460; @position = 18; @symbol_constdef = [dithering,460,18,27]; @symbol_type<0> = [String,460,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 463; @symbol_moduledef = [confirmation_loc__hint_reject,463,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 463; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 464; @position = 18; @symbol_constdef = [x,464,18,19]; @symbol_type<0> = [Number,464,23,29]; ]
+            const x as Number = 195;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 465; @position = 18; @symbol_constdef = [horizontalJustification,465,18,41]; @symbol_type<0> = [String,465,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 466; @position = 18; @symbol_constdef = [y,466,18,19]; @symbol_type<0> = [Number,466,23,29]; ]
+            const y as Number = 0;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 469; @symbol_moduledef = [confirmation_icon_dark__hint_delete,469,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 469; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 470; @position = 18; @symbol_constdef = [filename,470,18,26]; @symbol_type<0> = [String,470,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 471; @position = 18; @symbol_constdef = [dithering,471,18,27]; @symbol_type<0> = [String,471,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 472; @position = 18; @symbol_constdef = [packingFormat,472,18,31]; @symbol_type<0> = [String,472,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 475; @symbol_moduledef = [activity_color_dark__background,475,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 475; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 476; @position = 18; @symbol_constdef = [color,476,18,23]; @symbol_type<0> = [Number,476,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 477; @position = 18; @symbol_constdef = [background,477,18,28]; @symbol_type<0> = [Number,477,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 480; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,480,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 480; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 481; @position = 18; @symbol_constdef = [exclude,481,18,25]; @symbol_type<0> = [Boolean,481,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 484; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,484,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 484; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 485; @position = 18; @symbol_constdef = [exclude,485,18,25]; @symbol_type<0> = [Boolean,485,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 488; @symbol_moduledef = [system_size__menu_icon,488,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 488; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 489; @position = 18; @symbol_constdef = [scaleX,489,18,24]; @symbol_type<0> = [Number,489,28,34]; ]
+            const scaleX as Number = 48;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 490; @position = 18; @symbol_constdef = [scaleY,490,18,24]; @symbol_type<0> = [Number,490,28,34]; ]
+            const scaleY as Number = 48;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 491; @position = 18; @symbol_constdef = [scaleRelativeTo,491,18,33]; @symbol_type<0> = [String,491,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 494; @symbol_moduledef = [system_icon_destructive__warning,494,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 494; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 495; @position = 18; @symbol_constdef = [filename,495,18,26]; @symbol_type<0> = [String,495,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_destructive__warning.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 496; @position = 18; @symbol_constdef = [dithering,496,18,27]; @symbol_type<0> = [String,496,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 497; @position = 18; @symbol_constdef = [packingFormat,497,18,31]; @symbol_type<0> = [String,497,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 500; @symbol_moduledef = [system_loc__hint_button_right_middle,500,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 500; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 501; @position = 18; @symbol_constdef = [x,501,18,19]; @symbol_type<0> = [Number,501,23,29]; ]
+            const x as Number = 376;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 502; @position = 18; @symbol_constdef = [y,502,18,19]; @symbol_type<0> = [Number,502,23,29]; ]
+            const y as Number = 161;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 505; @symbol_moduledef = [system_icon_dark__cancel,505,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 505; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 506; @position = 18; @symbol_constdef = [filename,506,18,26]; @symbol_type<0> = [String,506,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__cancel.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 507; @position = 18; @symbol_constdef = [compress,507,18,26]; @symbol_type<0> = [String,507,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 508; @position = 18; @symbol_constdef = [dithering,508,18,27]; @symbol_type<0> = [String,508,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [automaticPalette,509,18,34]; @symbol_type<0> = [String,509,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 510; @position = 18; @symbol_constdef = [packingFormat,510,18,31]; @symbol_type<0> = [String,510,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 513; @symbol_moduledef = [prompt_size__body_with_title,513,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 513; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 514; @position = 18; @symbol_constdef = [width,514,18,23]; @symbol_type<0> = [Number,514,27,33]; ]
+            const width as Number = 310;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [height,515,18,24]; @symbol_type<0> = [Number,515,28,34]; ]
+            const height as Number = 167;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 518; @symbol_moduledef = [system_loc__hint_button_right_top,518,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 518; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 519; @position = 18; @symbol_constdef = [x,519,18,19]; @symbol_type<0> = [Number,519,23,29]; ]
+            const x as Number = 338;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [y,520,18,19]; @symbol_type<0> = [Number,520,23,29]; ]
+            const y as Number = 73;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 523; @symbol_moduledef = [system_color_light__text,523,15,39]; ]
+        module system_color_light__text {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 523; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 525 18 ]
+                symbol [ Graphics %tmp.37 525 31 39 ];
+                %tmp.37 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.38 525 40 57 ];
+                %tmp.38 = getv %tmp.37 :COLOR_TRANSPARENT;
+                putv self :background %tmp.38;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 524; @position = 18; @symbol_constdef = [color,524,18,23]; @symbol_type<0> = [Number,524,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 525; @position = 18; @symbol_constdef = [background,525,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 528; @symbol_moduledef = [system_icon_light__check,528,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 528; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 529; @position = 18; @symbol_constdef = [filename,529,18,26]; @symbol_type<0> = [String,529,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__check.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 530; @position = 18; @symbol_constdef = [compress,530,18,26]; @symbol_type<0> = [String,530,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 531; @position = 18; @symbol_constdef = [dithering,531,18,27]; @symbol_type<0> = [String,531,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [automaticPalette,532,18,34]; @symbol_type<0> = [String,532,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [packingFormat,533,18,31]; @symbol_type<0> = [String,533,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 536; @symbol_moduledef = [confirmation_input__reject,536,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 536; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 537; @position = 18; @symbol_constdef = [y1,537,18,20]; @symbol_type<0> = [Number,537,24,30]; ]
+            const y1 as Number = 0;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 538; @position = 18; @symbol_constdef = [x1,538,18,20]; @symbol_type<0> = [Number,538,24,30]; ]
+            const x1 as Number = 25;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 539; @position = 18; @symbol_constdef = [y2,539,18,20]; @symbol_type<0> = [Number,539,24,30]; ]
+            const y2 as Number = 83;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 540; @position = 18; @symbol_constdef = [x2,540,18,20]; @symbol_type<0> = [Number,540,24,30]; ]
+            const x2 as Number = 265;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 543; @symbol_moduledef = [system_icon_light__revert,543,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 543; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [filename,544,18,26]; @symbol_type<0> = [String,544,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__revert.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [compress,545,18,26]; @symbol_type<0> = [String,545,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 546; @position = 18; @symbol_constdef = [dithering,546,18,27]; @symbol_type<0> = [String,546,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 547; @position = 18; @symbol_constdef = [automaticPalette,547,18,34]; @symbol_type<0> = [String,547,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 548; @position = 18; @symbol_constdef = [packingFormat,548,18,31]; @symbol_type<0> = [String,548,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 551; @symbol_moduledef = [system_size__subwindow,551,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 551; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 552; @position = 18; @symbol_constdef = [exclude,552,18,25]; @symbol_type<0> = [Boolean,552,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 555; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,555,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 555; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [exclude,556,18,25]; @symbol_type<0> = [Boolean,556,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 559; @symbol_moduledef = [system_icon_dark__check,559,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 559; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 560; @position = 18; @symbol_constdef = [filename,560,18,26]; @symbol_type<0> = [String,560,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__check.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 561; @position = 18; @symbol_constdef = [compress,561,18,26]; @symbol_type<0> = [String,561,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 562; @position = 18; @symbol_constdef = [dithering,562,18,27]; @symbol_type<0> = [String,562,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 563; @position = 18; @symbol_constdef = [automaticPalette,563,18,34]; @symbol_type<0> = [String,563,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 564; @position = 18; @symbol_constdef = [packingFormat,564,18,31]; @symbol_type<0> = [String,564,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 567; @symbol_moduledef = [confirmation_loc__hint_keep,567,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 567; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [x,568,18,19]; @symbol_type<0> = [Number,568,23,29]; ]
+            const x as Number = 195;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 569; @position = 18; @symbol_constdef = [horizontalJustification,569,18,41]; @symbol_type<0> = [String,569,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 570; @position = 18; @symbol_constdef = [y,570,18,19]; @symbol_type<0> = [Number,570,23,29]; ]
+            const y as Number = 310;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 573; @symbol_moduledef = [confirmation_loc__hint_delete,573,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 573; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 574; @position = 18; @symbol_constdef = [x,574,18,19]; @symbol_type<0> = [Number,574,23,29]; ]
+            const x as Number = 195;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 575; @position = 18; @symbol_constdef = [horizontalJustification,575,18,41]; @symbol_type<0> = [String,575,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 576; @position = 18; @symbol_constdef = [y,576,18,19]; @symbol_type<0> = [Number,576,23,29]; ]
+            const y as Number = 0;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 579; @symbol_moduledef = [system_icon_positive__hint_action_menu,579,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 579; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [filename,580,18,26]; @symbol_type<0> = [String,580,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_positive__hint_action_menu.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 581; @position = 18; @symbol_constdef = [dithering,581,18,27]; @symbol_type<0> = [String,581,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 582; @position = 18; @symbol_constdef = [packingFormat,582,18,31]; @symbol_type<0> = [String,582,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 585; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,585,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 585; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 586; @position = 18; @symbol_constdef = [filename,586,18,26]; @symbol_type<0> = [String,586,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_positive__hint_button_right_middle.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 587; @position = 18; @symbol_constdef = [dithering,587,18,27]; @symbol_type<0> = [String,587,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 590; @symbol_moduledef = [system_icon_light__hint_button_left_middle,590,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 590; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [exclude,591,18,25]; @symbol_type<0> = [Boolean,591,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 594; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,594,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 594; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 595; @position = 18; @symbol_constdef = [filename,595,18,26]; @symbol_type<0> = [String,595,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [dithering,596,18,27]; @symbol_type<0> = [String,596,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 599; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,599,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 599; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 600; @position = 18; @symbol_constdef = [filename,600,18,26]; @symbol_type<0> = [String,600,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 601; @position = 18; @symbol_constdef = [dithering,601,18,27]; @symbol_type<0> = [String,601,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 604; @symbol_moduledef = [system_icon_dark__revert,604,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 604; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 605; @position = 18; @symbol_constdef = [filename,605,18,26]; @symbol_type<0> = [String,605,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__revert.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 606; @position = 18; @symbol_constdef = [compress,606,18,26]; @symbol_type<0> = [String,606,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 607; @position = 18; @symbol_constdef = [dithering,607,18,27]; @symbol_type<0> = [String,607,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 608; @position = 18; @symbol_constdef = [automaticPalette,608,18,34]; @symbol_type<0> = [String,608,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 609; @position = 18; @symbol_constdef = [packingFormat,609,18,31]; @symbol_type<0> = [String,609,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 612; @symbol_moduledef = [confirmation_icon_light__hint_delete,612,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 612; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [filename,613,18,26]; @symbol_type<0> = [String,613,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [dithering,614,18,27]; @symbol_type<0> = [String,614,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 615; @position = 18; @symbol_constdef = [packingFormat,615,18,31]; @symbol_type<0> = [String,615,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 618; @symbol_moduledef = [system_icon_dark__question,618,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 618; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [filename,619,18,26]; @symbol_type<0> = [String,619,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__question.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 620; @position = 18; @symbol_constdef = [compress,620,18,26]; @symbol_type<0> = [String,620,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [dithering,621,18,27]; @symbol_type<0> = [String,621,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 622; @position = 18; @symbol_constdef = [automaticPalette,622,18,34]; @symbol_type<0> = [String,622,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 623; @position = 18; @symbol_constdef = [packingFormat,623,18,31]; @symbol_type<0> = [String,623,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 626; @symbol_moduledef = [system_icon_light__discard,626,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 626; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 627; @position = 18; @symbol_constdef = [filename,627,18,26]; @symbol_type<0> = [String,627,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__discard.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 628; @position = 18; @symbol_constdef = [compress,628,18,26]; @symbol_type<0> = [String,628,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 629; @position = 18; @symbol_constdef = [dithering,629,18,27]; @symbol_type<0> = [String,629,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 630; @position = 18; @symbol_constdef = [automaticPalette,630,18,34]; @symbol_type<0> = [String,630,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 631; @position = 18; @symbol_constdef = [packingFormat,631,18,31]; @symbol_type<0> = [String,631,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 634; @symbol_moduledef = [device_info,634,15,26]; ]
+        module device_info {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 634; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 636 18 ]
+                symbol [ Toybox %tmp.40 636 32 38 ];
+                %tmp.40 = getv ? :Toybox;
+                symbol [ System %tmp.41 636 39 45 ];
+                %tmp.41 = getv %tmp.40 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.42 636 46 64 ];
+                %tmp.42 = getv %tmp.41 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.42;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [screenWidth,635,18,29]; @symbol_type<0> = [Number,635,33,39]; ]
+            const screenWidth as Number = 390;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [screenShape,636,18,29]; ]
+            const screenShape;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 637; @position = 18; @symbol_constdef = [hasNightMode,637,18,30]; @symbol_type<0> = [Boolean,637,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 638; @position = 18; @symbol_constdef = [hasGpu,638,18,24]; @symbol_type<0> = [Boolean,638,28,35]; ]
+            const hasGpu as Boolean = true;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 639; @position = 18; @symbol_constdef = [screenHeight,639,18,30]; @symbol_type<0> = [Number,639,34,40]; ]
+            const screenHeight as Number = 390;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [hasTouchScreen,640,18,32]; @symbol_type<0> = [Boolean,640,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 641; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,641,18,44]; @symbol_type<0> = [Boolean,641,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 644; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,644,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 644; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 645; @position = 18; @symbol_constdef = [filename,645,18,26]; @symbol_type<0> = [String,645,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 646; @position = 18; @symbol_constdef = [dithering,646,18,27]; @symbol_type<0> = [String,646,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 647; @position = 18; @symbol_constdef = [packingFormat,647,18,31]; @symbol_type<0> = [String,647,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 650; @symbol_moduledef = [prompt_font__body_no_title,650,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 650; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 651 18 ]
+                symbol [ Graphics %tmp.43 651 34 42 ];
+                %tmp.43 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.44 651 43 62 ];
+                %tmp.44 = getv %tmp.43 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.45 651 63 71 ];
+                %tmp.45 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.46 651 72 92 ];
+                %tmp.46 = getv %tmp.45 :TEXT_JUSTIFY_VCENTER;
+                %tmp.47 = bitor %tmp.44 %tmp.46;
+                putv self :justification %tmp.47;
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 652 18 ]
+                symbol [ Graphics %tmp.48 652 25 33 ];
+                %tmp.48 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.49 652 34 43 ];
+                %tmp.49 = getv %tmp.48 :FONT_TINY;
+                putv self :font %tmp.49;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 651; @position = 18; @symbol_constdef = [justification,651,18,31]; ]
+            const justification;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 652; @position = 18; @symbol_constdef = [font,652,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 655; @symbol_moduledef = [prompt_size__title_icon,655,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 655; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 656; @position = 18; @symbol_constdef = [scaleX,656,18,24]; @symbol_type<0> = [Float,656,28,33]; ]
+            const scaleX as Float = 0.14;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 657; @position = 18; @symbol_constdef = [scaleRelativeTo,657,18,33]; @symbol_type<0> = [String,657,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 660; @symbol_moduledef = [system_icon_dark__warning,660,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 660; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 661; @position = 18; @symbol_constdef = [filename,661,18,26]; @symbol_type<0> = [String,661,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_dark__warning.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 662; @position = 18; @symbol_constdef = [compress,662,18,26]; @symbol_type<0> = [String,662,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 663; @position = 18; @symbol_constdef = [dithering,663,18,27]; @symbol_type<0> = [String,663,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 664; @position = 18; @symbol_constdef = [automaticPalette,664,18,34]; @symbol_type<0> = [String,664,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 665; @position = 18; @symbol_constdef = [packingFormat,665,18,31]; @symbol_type<0> = [String,665,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 668; @symbol_moduledef = [prompt_loc__title_icon,668,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 668; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 669; @position = 18; @symbol_constdef = [x,669,18,19]; @symbol_type<0> = [Number,669,23,29]; ]
+            const x as Number = 195;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 670; @position = 18; @symbol_constdef = [y,670,18,19]; @symbol_type<0> = [Number,670,23,29]; ]
+            const y as Number = 45;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 671; @position = 18; @symbol_constdef = [horizontalJustification,671,18,41]; @symbol_type<0> = [String,671,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 672; @position = 18; @symbol_constdef = [verticalJustification,672,18,39]; @symbol_type<0> = [String,672,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 675; @symbol_moduledef = [prompt_font_enhanced_readability__title,675,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 675; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 676; @position = 18; @symbol_constdef = [exclude,676,18,25]; @symbol_type<0> = [Boolean,676,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 679; @symbol_moduledef = [prompt_color_dark__body,679,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 679; ]
+            <init> {
+[ "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen" 681 18 ]
+                symbol [ Graphics %tmp.50 681 31 39 ];
+                %tmp.50 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.51 681 40 57 ];
+                %tmp.51 = getv %tmp.50 :COLOR_TRANSPARENT;
+                putv self :background %tmp.51;
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 680; @position = 18; @symbol_constdef = [color,680,18,23]; @symbol_type<0> = [Number,680,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 681; @position = 18; @symbol_constdef = [background,681,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 684; @symbol_moduledef = [confirmation_icon__hint_delete,684,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 684; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 685; @position = 18; @symbol_constdef = [filename,685,18,26]; @symbol_type<0> = [String,685,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 686; @position = 18; @symbol_constdef = [dithering,686,18,27]; @symbol_type<0> = [String,686,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 687; @position = 18; @symbol_constdef = [packingFormat,687,18,31]; @symbol_type<0> = [String,687,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 690; @symbol_moduledef = [system_icon_light__hint_button_right_top,690,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 690; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 691; @position = 18; @symbol_constdef = [filename,691,18,26]; @symbol_type<0> = [String,691,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 692; @position = 18; @symbol_constdef = [dithering,692,18,27]; @symbol_type<0> = [String,692,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 695; @symbol_moduledef = [confirmation_size__body,695,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 695; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 696; @position = 18; @symbol_constdef = [width,696,18,23]; @symbol_type<0> = [Number,696,27,33]; ]
+            const width as Number = 310;
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 697; @position = 18; @symbol_constdef = [height,697,18,24]; @symbol_type<0> = [Number,697,28,34]; ]
+            const height as Number = 211;
+        }
+        [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 700; @symbol_moduledef = [system_icon_positive__check,700,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 700; ]
+            <init> {
+            }
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 701; @position = 18; @symbol_constdef = [filename,701,18,26]; @symbol_type<0> = [String,701,30,36]; ]
+            const filename as String = "C:\\Users\\crist\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\approachs7042mm\\system_icon_positive__check.svg";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 702; @position = 18; @symbol_constdef = [dithering,702,18,27]; @symbol_type<0> = [String,702,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 703; @position = 18; @symbol_constdef = [packingFormat,703,18,31]; @symbol_type<0> = [String,703,35,41]; ]
+            const packingFormat as String = "png";
+        }
+    }
 }
-[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B3113-00\source\Rez.mcgen"; @line = 1; ]
+[ @file = "c:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\bin\gen\006-B4233-00\source\Rez.mcgen"; @line = 1; ]
 <init> {
 }

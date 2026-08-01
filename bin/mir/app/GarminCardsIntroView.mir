@@ -1,0 +1,455 @@
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Graphics,1,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 4; @symbol_classdef = [GarminCardsIntroView,4,6,26]; @symbol_extends<0> = [WatchUi,4,35,42]; @symbol_extends<1> = [View,4,43,47]; ]
+class GarminCardsIntroView extends WatchUi.View {
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 4; ]
+    <init> {
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 5 16 ]
+        %tmp.1 = newa 0;
+        putv self :_cards %tmp.1;
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 5; @position = 16; @symbol_vardef = [_cards,5,16,22]; ]
+    private
+    var _cards;
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 6; @position = 16; @symbol_vardef = [_introFramesRemaining,6,16,37]; ]
+    private
+    var _introFramesRemaining = 2;
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 7; @position = 16; @symbol_vardef = [_switchPending,7,16,30]; ]
+    private
+    var _switchPending = false;
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 8; @position = 16; @symbol_vardef = [_transitioned,8,16,29]; ]
+    private
+    var _transitioned = false;
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 10; @symbol_functiondef = [initialize,10,20,30]; ]
+    public
+    function initialize() as Void {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_10_33_12_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 11 8 ]
+        symbol [ View %tmp.2 11 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 11 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_10_33_12_4_stop:
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 14; @symbol_functiondef = [onShow,14,20,26]; ]
+    public
+    function onShow() {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_14_29_19_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 15 8 ]
+        symbol [ GarminCardsData %tmp.2 15 17 32 ];
+        %tmp.2 = getv ? :GarminCardsData;
+        symbol [ loadCards %tmp.3 15 33 42 ];
+        %tmp.3 = getv function %tmp.2 :loadCards;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        symbol [ _cards ? 15 8 14 ];
+        putv self :_cards %tmp.4;
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 16 8 ]
+        %tmp.5 = 2;
+        symbol [ _introFramesRemaining ? 16 8 29 ];
+        putv self :_introFramesRemaining %tmp.5;
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 17 8 ]
+        %tmp.6 = false;
+        symbol [ _switchPending ? 17 8 22 ];
+        putv self :_switchPending %tmp.6;
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 18 8 ]
+        %tmp.7 = false;
+        symbol [ _transitioned ? 18 8 21 ];
+        putv self :_transitioned %tmp.7;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_14_29_19_4_stop:
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 21; @symbol_functiondef = [onHide,21,20,26]; ]
+    public
+    function onHide() {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_21_29_23_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 22 8 ]
+        symbol [ View %tmp.2 22 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ onHide %tmp.3 22 13 19 ];
+        %tmp.3 = getv function %tmp.2 :onHide;
+        invoke %tmp.2 %tmp.3();
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_21_29_23_4_stop:
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 25; @symbol_functiondef = [onUpdate,25,20,28]; @symbol_param<0> = [dc,25,29,31]; ]
+    public
+    function onUpdate(dc) {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 26 8 ]
+        [ "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_start" "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_stop" ]
+        %width.1 = local;
+        symbol [ width %width.1 26 12 17 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 26 20 22 ];
+        symbol [ getWidth %tmp.2 26 23 31 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        symbol [ width %width.1 26 12 17 ];
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 27 8 ]
+        [ "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_start" "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_stop" ]
+        %height.2 = local;
+        symbol [ height %height.2 27 12 18 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 27 21 23 ];
+        symbol [ getHeight %tmp.5 27 24 33 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+        symbol [ height %height.2 27 12 18 ];
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 28 8 ]
+        [ "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_start" "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_stop" ]
+        %font.3 = local;
+        symbol [ font %font.3 28 12 16 ];
+        %tmp.7 = self;
+        symbol [ pickTitleFont %tmp.8 28 19 32 ];
+        %tmp.8 = getv function %tmp.7 :pickTitleFont;
+        %tmp.9 = lgetv %width.1;
+        symbol [ width %tmp.9 28 33 38 ];
+        %tmp.10 = lgetv %height.2;
+        symbol [ height %tmp.10 28 40 46 ];
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10);
+        lputv %font.3 %tmp.11;
+        symbol [ font %font.3 28 12 16 ];
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 29 8 ]
+        [ "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_start" "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_stop" ]
+        %titleY.4 = local;
+        symbol [ titleY %titleY.4 29 12 18 ];
+        %tmp.12 = self;
+        symbol [ centeredTextBaseline %tmp.13 29 21 41 ];
+        %tmp.13 = getv function %tmp.12 :centeredTextBaseline;
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 29 42 44 ];
+        %tmp.15 = lgetv %height.2;
+        symbol [ height %tmp.15 29 46 52 ];
+        %tmp.16 = lgetv %font.3;
+        symbol [ font %tmp.16 29 54 58 ];
+        %tmp.17 = invoke %tmp.12 %tmp.13(%tmp.14, %tmp.15, %tmp.16);
+        lputv %titleY.4 %tmp.17;
+        symbol [ titleY %titleY.4 29 12 18 ];
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 31 8 ]
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 31 8 10 ];
+        symbol [ setColor %tmp.19 31 11 19 ];
+        %tmp.19 = getv function %tmp.18 :setColor;
+        symbol [ Graphics %tmp.20 31 20 28 ];
+        %tmp.20 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.21 31 29 40 ];
+        %tmp.21 = getv %tmp.20 :COLOR_BLACK;
+        symbol [ Graphics %tmp.22 31 42 50 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.23 31 51 62 ];
+        %tmp.23 = getv %tmp.22 :COLOR_BLACK;
+        invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23);
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 32 8 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 32 8 10 ];
+        symbol [ clear %tmp.25 32 11 16 ];
+        %tmp.25 = getv function %tmp.24 :clear;
+        invoke %tmp.24 %tmp.25();
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 34 8 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 34 8 10 ];
+        symbol [ setColor %tmp.27 34 11 19 ];
+        %tmp.27 = getv function %tmp.26 :setColor;
+        symbol [ Graphics %tmp.28 34 20 28 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.29 34 29 40 ];
+        %tmp.29 = getv %tmp.28 :COLOR_WHITE;
+        symbol [ Graphics %tmp.30 34 42 50 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.31 34 51 62 ];
+        %tmp.31 = getv %tmp.30 :COLOR_BLACK;
+        invoke %tmp.26 %tmp.27(%tmp.29, %tmp.31);
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 35 8 ]
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 35 8 10 ];
+        symbol [ drawText %tmp.33 35 11 19 ];
+        %tmp.33 = getv function %tmp.32 :drawText;
+        %tmp.34 = lgetv %width.1;
+        symbol [ width %tmp.34 36 12 17 ];
+        %tmp.35 = 2;
+        %tmp.36 = div %tmp.34 %tmp.35;
+        %tmp.37 = lgetv %titleY.4;
+        symbol [ titleY %tmp.37 37 12 18 ];
+        %tmp.38 = lgetv %font.3;
+        symbol [ font %tmp.38 38 12 16 ];
+        %tmp.39 = "Loyalty Hub";
+        symbol [ Graphics %tmp.40 40 12 20 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.41 40 21 40 ];
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.32 %tmp.33(%tmp.36, %tmp.37, %tmp.38, %tmp.39, %tmp.41);
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 43 8 ]
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_43_8_46_8_if_stmt:
+        symbol [ _switchPending %tmp.43 43 12 26 ];
+        %tmp.43 = getv ? :_switchPending;
+        bf %tmp.43 @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_43_8_46_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_43_8_46_8_if_true:
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_43_28_46_8_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 44 12 ]
+        %tmp.44 = self;
+        symbol [ goToMainView %tmp.45 44 12 24 ];
+        %tmp.45 = getv function %tmp.44 :goToMainView;
+        invoke %tmp.44 %tmp.45();
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 45 12 ]
+        ret ?;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_43_28_46_8_stop:
+        goto @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_43_8_46_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_43_8_46_8_if_end:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 48 8 ]
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_48_8_54_8_if_stmt:
+        symbol [ _introFramesRemaining %tmp.47 48 12 33 ];
+        %tmp.47 = getv ? :_introFramesRemaining;
+        %tmp.48 = 0;
+        %tmp.49 = gt %tmp.47 %tmp.48;
+        bf %tmp.49 @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_48_8_54_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_48_8_54_8_if_true:
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_48_39_54_8_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 49 12 ]
+        symbol [ _introFramesRemaining %tmp.50 49 12 33 ];
+        %tmp.50 = getv self :_introFramesRemaining;
+        %tmp.51 = 1;
+        %tmp.52 = sub %tmp.50 %tmp.51;
+        symbol [ _introFramesRemaining ? 49 12 33 ];
+        putv self :_introFramesRemaining dup %tmp.52;
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 50 12 ]
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_50_12_52_12_if_stmt:
+        symbol [ _introFramesRemaining %tmp.54 50 16 37 ];
+        %tmp.54 = getv ? :_introFramesRemaining;
+        %tmp.55 = 0;
+        %tmp.56 = eq %tmp.54 %tmp.55;
+        bf %tmp.56 @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_50_12_52_12_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_50_12_52_12_if_true:
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_50_44_52_12_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 51 16 ]
+        %tmp.57 = true;
+        symbol [ _switchPending ? 51 16 30 ];
+        putv self :_switchPending %tmp.57;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_50_44_52_12_stop:
+        goto @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_50_12_52_12_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_50_12_52_12_if_end:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 53 12 ]
+        symbol [ WatchUi %tmp.58 53 12 19 ];
+        %tmp.58 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.59 53 20 33 ];
+        %tmp.59 = getv function %tmp.58 :requestUpdate;
+        invoke %tmp.58 %tmp.59();
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_48_39_54_8_stop:
+        goto @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_48_8_54_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_48_8_54_8_if_end:
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_25_33_55_4_stop:
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 57; @symbol_functiondef = [goToMainView,57,20,32]; ]
+    public
+    function goToMainView() {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_57_35_66_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 58 8 ]
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_58_8_60_8_if_stmt:
+        symbol [ _transitioned %tmp.2 58 12 25 ];
+        %tmp.2 = getv ? :_transitioned;
+        bf %tmp.2 @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_58_8_60_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_58_8_60_8_if_true:
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_58_27_60_8_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 59 12 ]
+        ret ?;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_58_27_60_8_stop:
+        goto @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_58_8_60_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_58_8_60_8_if_end:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 62 8 ]
+        %tmp.3 = true;
+        symbol [ _transitioned ? 62 8 21 ];
+        putv self :_transitioned %tmp.3;
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 64 8 ]
+        [ "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_57_35_66_4_start" "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_57_35_66_4_stop" ]
+        %mainView.1 = local;
+        symbol [ mainView %mainView.1 64 12 20 ];
+        symbol [ GarminCardsView %tmp.7 64 27 42 ];
+        %tmp.7 = getv ? :GarminCardsView;
+        %tmp.4 = newc %tmp.7 ();
+        lputv %mainView.1 %tmp.4;
+        symbol [ mainView %mainView.1 64 12 20 ];
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 65 8 ]
+        symbol [ WatchUi %tmp.8 65 8 15 ];
+        %tmp.8 = getm $.Toybox.WatchUi;
+        symbol [ switchToView %tmp.9 65 16 28 ];
+        %tmp.9 = getv function %tmp.8 :switchToView;
+        %tmp.10 = lgetv %mainView.1;
+        symbol [ mainView %tmp.10 65 29 37 ];
+        symbol [ GarminCardsDelegate %tmp.14 65 43 62 ];
+        %tmp.14 = getv ? :GarminCardsDelegate;
+        %tmp.15 = lgetv %mainView.1;
+        symbol [ mainView %tmp.15 65 63 71 ];
+        %tmp.11 = newc %tmp.14 (%tmp.15);
+        symbol [ WatchUi %tmp.16 65 74 81 ];
+        %tmp.16 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_BLINK %tmp.17 65 82 93 ];
+        %tmp.17 = getv %tmp.16 :SLIDE_BLINK;
+        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.11, %tmp.17);
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_57_35_66_4_stop:
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 68; @symbol_functiondef = [isTransitioned,68,20,34]; ]
+    public
+    function isTransitioned() {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_68_37_70_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 69 8 ]
+        symbol [ _transitioned %tmp.2 69 15 28 ];
+        %tmp.2 = getv ? :_transitioned;
+        ret %tmp.2;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_68_37_70_4_stop:
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 72; @symbol_functiondef = [pickTitleFont,72,21,34]; @symbol_param<0> = [width,72,35,40]; @symbol_param<1> = [height,72,42,48]; ]
+    private
+    function pickTitleFont(width, height) {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_72_50_88_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 73 8 ]
+        [ "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_72_50_88_4_start" "C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_72_50_88_4_stop" ]
+        %shortSide.1 = local;
+        symbol [ shortSide %shortSide.1 73 12 21 ];
+        %tmp.1 = self;
+        symbol [ minValue %tmp.2 73 24 32 ];
+        %tmp.2 = getv function %tmp.1 :minValue;
+        %tmp.3 = lgetv %width;
+        symbol [ width %tmp.3 73 33 38 ];
+        %tmp.4 = lgetv %height;
+        symbol [ height %tmp.4 73 40 46 ];
+        %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
+        lputv %shortSide.1 %tmp.5;
+        symbol [ shortSide %shortSide.1 73 12 21 ];
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 75 8 ]
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_75_8_77_8_if_stmt:
+        %tmp.6 = lgetv %shortSide.1;
+        symbol [ shortSide %tmp.6 75 12 21 ];
+        %tmp.7 = 54;
+        %tmp.8 = lt %tmp.6 %tmp.7;
+        bf %tmp.8 @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_75_8_77_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_75_8_77_8_if_true:
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_75_28_77_8_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 76 12 ]
+        symbol [ Graphics %tmp.9 76 19 27 ];
+        %tmp.9 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.10 76 28 37 ];
+        %tmp.10 = getv %tmp.9 :FONT_TINY;
+        ret %tmp.10;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_75_28_77_8_stop:
+        goto @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_75_8_77_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_75_8_77_8_if_end:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 79 8 ]
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_79_8_81_8_if_stmt:
+        %tmp.11 = lgetv %shortSide.1;
+        symbol [ shortSide %tmp.11 79 12 21 ];
+        %tmp.12 = 70;
+        %tmp.13 = lt %tmp.11 %tmp.12;
+        bf %tmp.13 @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_79_8_81_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_79_8_81_8_if_true:
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_79_28_81_8_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 80 12 ]
+        symbol [ Graphics %tmp.14 80 19 27 ];
+        %tmp.14 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.15 80 28 38 ];
+        %tmp.15 = getv %tmp.14 :FONT_XTINY;
+        ret %tmp.15;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_79_28_81_8_stop:
+        goto @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_79_8_81_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_79_8_81_8_if_end:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 83 8 ]
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_83_8_85_8_if_stmt:
+        %tmp.16 = lgetv %shortSide.1;
+        symbol [ shortSide %tmp.16 83 12 21 ];
+        %tmp.17 = 88;
+        %tmp.18 = lt %tmp.16 %tmp.17;
+        bf %tmp.18 @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_83_8_85_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_83_8_85_8_if_true:
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_83_28_85_8_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 84 12 ]
+        symbol [ Graphics %tmp.19 84 19 27 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.20 84 28 38 ];
+        %tmp.20 = getv %tmp.19 :FONT_SMALL;
+        ret %tmp.20;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_83_28_85_8_stop:
+        goto @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_83_8_85_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_83_8_85_8_if_end:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 87 8 ]
+        symbol [ Graphics %tmp.21 87 15 23 ];
+        %tmp.21 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.22 87 24 34 ];
+        %tmp.22 = getv %tmp.21 :FONT_SMALL;
+        ret %tmp.22;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_72_50_88_4_stop:
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 90; @symbol_functiondef = [minValue,90,21,29]; @symbol_param<0> = [a,90,30,31]; @symbol_param<1> = [b,90,33,34]; ]
+    private
+    function minValue(a, b) {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_90_36_96_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 91 8 ]
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_91_8_93_8_if_stmt:
+        %tmp.1 = lgetv %a;
+        symbol [ a %tmp.1 91 12 13 ];
+        %tmp.2 = lgetv %b;
+        symbol [ b %tmp.2 91 16 17 ];
+        %tmp.3 = lt %tmp.1 %tmp.2;
+        bf %tmp.3 @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_91_8_93_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_91_8_93_8_if_true:
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_91_19_93_8_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 92 12 ]
+        %tmp.4 = lgetv %a;
+        symbol [ a %tmp.4 92 19 20 ];
+        ret %tmp.4;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_91_19_93_8_stop:
+        goto @C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_91_8_93_8_if_end;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_91_8_93_8_if_end:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 95 8 ]
+        %tmp.5 = lgetv %b;
+        symbol [ b %tmp.5 95 15 16 ];
+        ret %tmp.5;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_90_36_96_4_stop:
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 98; @symbol_functiondef = [centeredTextBaseline,98,21,41]; @symbol_param<0> = [dc,98,42,44]; @symbol_param<1> = [height,98,46,52]; @symbol_param<2> = [font,98,54,58]; ]
+    private
+    function centeredTextBaseline(dc, height, font) {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_98_60_100_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 99 8 ]
+        %tmp.1 = self;
+        symbol [ toInt %tmp.2 99 15 20 ];
+        %tmp.2 = getv function %tmp.1 :toInt;
+        %tmp.3 = lgetv %height;
+        symbol [ height %tmp.3 99 22 28 ];
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 99 37 39 ];
+        symbol [ getFontHeight %tmp.7 99 40 53 ];
+        %tmp.7 = getv function %tmp.6 :getFontHeight;
+        %tmp.8 = lgetv %font;
+        symbol [ font %tmp.8 99 54 58 ];
+        %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
+        %tmp.10 = 3;
+        %tmp.11 = div %tmp.9 %tmp.10;
+        %tmp.12 = add %tmp.5 %tmp.11;
+        %tmp.13 = invoke %tmp.1 %tmp.2(%tmp.12);
+        ret %tmp.13;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_98_60_100_4_stop:
+    }
+    [ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 102; @symbol_functiondef = [toInt,102,21,26]; @symbol_param<0> = [value,102,27,32]; ]
+    private
+    function toInt(value) {
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_102_34_104_4_start:
+[ "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc" 103 8 ]
+        %tmp.1 = lgetv %value;
+        symbol [ value %tmp.1 103 15 20 ];
+        symbol [ toNumber %tmp.2 103 21 29 ];
+        %tmp.2 = getv function %tmp.1 :toNumber;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        ret %tmp.3;
+C__Users_crist_Documents_GarninProjects_LoyaltyHubLegacy_app_GarminCardsIntroView_mc_102_34_104_4_stop:
+    }
+}
+[ @file = "C:\Users\crist\Documents\GarninProjects\LoyaltyHubLegacy\app\GarminCardsIntroView.mc"; @line = 1; ]
+<init> {
+}
