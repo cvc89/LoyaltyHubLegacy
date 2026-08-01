@@ -6,15 +6,6 @@ module GarminCardsData {
     var _asciiCacheChars = [];
     var _asciiCacheValues = [];
 
-    function isLegacyDevice() {
-        var major = getMonkeyMajorVersion();
-        if (major == null) {
-            return true;
-        }
-
-        return major < 5;
-    }
-
     function isCiq5OrNewer() {
         var major = getMonkeyMajorVersion();
         return major != null && major >= 5;

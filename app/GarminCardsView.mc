@@ -67,6 +67,7 @@ class GarminCardsView extends WatchUi.View {
 
         _currentIndex = (_currentIndex + 1) % _cards.size();
         prepareCurrentCard();
+        applyDefaultZoomState();
         _isBrightnessMax = true;
         applyBrightnessState();
         WatchUi.requestUpdate();
@@ -79,12 +80,17 @@ class GarminCardsView extends WatchUi.View {
 
         _currentIndex = (_currentIndex + _cards.size() - 1) % _cards.size();
         prepareCurrentCard();
+        applyDefaultZoomState();
         _isBrightnessMax = true;
         applyBrightnessState();
         WatchUi.requestUpdate();
     }
 
     public function toggleMode() {
+        if (!isCurrentQrCard()) {
+            return;
+        }
+
         _isCodeFullscreen = !_isCodeFullscreen;
         _isBrightnessMax = true;
         applyBrightnessState();
@@ -106,6 +112,16 @@ class GarminCardsView extends WatchUi.View {
         return _isCodeFullscreen;
     }
 
+    private function isCurrentQrCard() {
+        if (_cards == null || _cards.size() == 0) {
+            return false;
+        }
+
+        var card = _cards[_currentIndex];
+        var codeType = getCardCodeType(card);
+        return shouldRenderAsQr(card, codeType);
+    }
+
     public function handleTap(x, y) {
         if (_cards == null || _cards.size() == 0) {
             return false;
@@ -117,9 +133,7 @@ class GarminCardsView extends WatchUi.View {
         }
 
         var card = _cards[_currentIndex];
-        var codeType = getCardCodeType(card);
         var isQrCard = isActiveQrCard(card);
-        var isPhoneCard = GarminCardsData.stringEquals(codeType, "PHONE");
 
         if (isQrCard) {
             if (isPointInQrArea(x, y)) {
@@ -127,19 +141,6 @@ class GarminCardsView extends WatchUi.View {
                 return true;
             }
             return false;
-        }
-
-        if (isPhoneCard) {
-            if (isPointInPhoneValueArea(x, y)) {
-                toggleMode();
-                return true;
-            }
-            return false;
-        }
-
-        if (isPointInBarcodeArea(x, y, codeType)) {
-            toggleMode();
-            return true;
         }
 
         return false;
@@ -153,21 +154,13 @@ class GarminCardsView extends WatchUi.View {
         var height = dc.getHeight();
         _lastWidth = width;
         _lastHeight = height;
-        var isLegacyLayout = GarminCardsData.isLegacyDevice();
 
-        var backgroundColor = _isCodeFullscreen ? Graphics.COLOR_WHITE : Graphics.COLOR_BLACK;
+        var backgroundColor = (_isCodeFullscreen && isCurrentQrCard()) ? Graphics.COLOR_WHITE : Graphics.COLOR_BLACK;
         dc.setColor(backgroundColor, backgroundColor);
         dc.clear();
 
         if (_cards.size() == 0) {
-            if (isLegacyLayout) {
-                drawLegacyEmptyState(dc, width, height);
-            } else {
-                drawFrame(dc, width, height);
-                drawHeader(dc, width, false);
-                drawEmptyState(dc, width, height);
-                drawFooter(dc, width, height);
-            }
+            drawLegacyEmptyState(dc, width, height);
             return;
         }
 
@@ -177,27 +170,10 @@ class GarminCardsView extends WatchUi.View {
         var isPhoneCard = GarminCardsData.stringEquals(codeType, "PHONE");
         log("[LH][View] onUpdate index=" + _currentIndex + " merchant=" + card[:merchant] + " codeType=" + codeType + " renderAsQr=" + safeCardValue(card, :renderAsQr) + " isQrCard=" + isQrCard);
 
-        if (_isCodeFullscreen) {
-            drawFullscreenCardScreen(dc, width, height, card, codeType, isQrCard, isPhoneCard);
-        } else if (isLegacyLayout) {
-            drawLegacyCardScreen(dc, width, height, card, codeType, isQrCard, isPhoneCard);
-        } else if (isQrCard) {
-            drawFrame(dc, width, height);
-            drawHeader(dc, width, isQrCard);
-            drawQrCardScreen(dc, width, height, card);
-        } else if (isPhoneCard) {
-            drawFrame(dc, width, height);
-            drawHeader(dc, width, isQrCard);
-            drawPhoneCardScreen(dc, width, height, card);
+        if (_isCodeFullscreen && isQrCard) {
+            drawFullscreenQrCardScreen(dc, width, height, card);
         } else {
-            drawFrame(dc, width, height);
-            drawHeader(dc, width, isQrCard);
-            drawBarcodeCardScreen(dc, width, height, card);
-        }
-
-        if (!isLegacyLayout && !_isCodeFullscreen) {
-            drawCardIndicators(dc, width, height);
-            drawFooter(dc, width, height);
+            drawLegacyCardScreen(dc, width, height, card, codeType, isQrCard, isPhoneCard);
         }
 
         if (_qrBuild != null) {
@@ -258,8 +234,10 @@ class GarminCardsView extends WatchUi.View {
     }
 
     private function applyDefaultZoomState() {
-        if (GarminCardsData.isLegacyDevice() && _cards != null && _cards.size() > 0) {
-            _isCodeFullscreen = true;
+        if (_cards != null && _cards.size() > 0) {
+            var card = _cards[_currentIndex];
+            var codeType = getCardCodeType(card);
+            _isCodeFullscreen = shouldRenderAsQr(card, codeType);
             _isBrightnessMax = true;
             return;
         }
@@ -453,158 +431,6 @@ class GarminCardsView extends WatchUi.View {
         _qrBuild[:row] = row;
     }
 
-    private function drawFrame(dc, width, height) {
-        var insetOuter = width / 30;
-        var insetInner = insetOuter + (width / 65);
-
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        drawSphereCutFrameOutline(dc, width, height, insetOuter);
-        drawSphereCutFrameOutline(dc, width, height, insetInner);
-    }
-
-    private function drawSphereCutFrameOutline(dc, width, height, inset) {
-        var centerX = width / 2.0;
-        var centerY = height / 2.0;
-        var radius = (minValue(width, height) / 2.0) - 2.0;
-        var left = inset;
-        var top = inset;
-        var right = width - inset - 1;
-        var bottom = height - inset - 1;
-
-        var topOffset = circleChordOffset(radius, absValue(top - centerY));
-        var rightOffset = circleChordOffset(radius, absValue(right - centerX));
-        var bottomOffset = circleChordOffset(radius, absValue(bottom - centerY));
-        var leftOffset = circleChordOffset(radius, absValue(left - centerX));
-
-        var x1 = toInt(centerX - topOffset);
-        var y1 = toInt(top);
-        var x2 = toInt(centerX + topOffset);
-        var y2 = toInt(top);
-        var x3 = toInt(right);
-        var y3 = toInt(centerY - rightOffset);
-        var x4 = toInt(right);
-        var y4 = toInt(centerY + rightOffset);
-        var x5 = toInt(centerX + bottomOffset);
-        var y5 = toInt(bottom);
-        var x6 = toInt(centerX - bottomOffset);
-        var y6 = toInt(bottom);
-        var x7 = toInt(left);
-        var y7 = toInt(centerY + leftOffset);
-        var x8 = toInt(left);
-        var y8 = toInt(centerY - leftOffset);
-
-        dc.drawLine(x1, y1, x2, y2);
-        dc.drawLine(x2, y2, x3, y3);
-        dc.drawLine(x3, y3, x4, y4);
-        dc.drawLine(x4, y4, x5, y5);
-        dc.drawLine(x5, y5, x6, y6);
-        dc.drawLine(x6, y6, x7, y7);
-        dc.drawLine(x7, y7, x8, y8);
-        dc.drawLine(x8, y8, x1, y1);
-    }
-
-    private function circleChordOffset(radius, distanceFromCenter) {
-        var remaining = (radius * radius) - (distanceFromCenter * distanceFromCenter);
-        if (remaining <= 0) {
-            return 0;
-        }
-
-        return sqrtApprox(remaining);
-    }
-
-    private function drawHeader(dc, width, isQrCard) {
-        var font = Graphics.FONT_XTINY;
-        var y = 12 + (dc.getFontHeight(font) / 2);
-        var title = isQrCard ? "LOYALTY HUB" : "LOYALTY HUB";
-
-        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, y, font, fitText(dc, title, font, width - 28), Graphics.TEXT_JUSTIFY_CENTER);
-    }
-
-    private function drawEmptyState(dc, width, height) {
-        var titleFont = pickTitleFont(width, height);
-        var bodyFont = pickBodyFont(height);
-        var top = height * 0.30;
-        var gap = 4;
-        var bodyY = top + dc.getFontHeight(titleFont) + 8;
-        var maxWidth = width * 0.70;
-
-        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, top, titleFont, fitText(dc, "No cards", titleFont, maxWidth), Graphics.TEXT_JUSTIFY_CENTER);
-
-        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, bodyY, bodyFont, fitText(dc, "Set them up in", bodyFont, maxWidth), Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(width / 2, bodyY + dc.getFontHeight(bodyFont) + gap, bodyFont, fitText(dc, "Garmin Connect IQ", bodyFont, maxWidth), Graphics.TEXT_JUSTIFY_CENTER);
-
-        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, height * 0.64, bodyFont, fitText(dc, "Fields: Store / Value", bodyFont, maxWidth), Graphics.TEXT_JUSTIFY_CENTER);
-    }
-
-    private function drawBarcodeCardScreen(dc, width, height, card) {
-        var titleFont = pickBodyFont(height);
-        var metaFont = Graphics.FONT_XTINY;
-        var topTextY = height * 0.20;
-        var barcodeSideInset = getBarcodeInset(width, height, 8);
-        var barcodeTop = height * 0.35;
-        var codeType = getCardCodeType(card);
-        var barcodeHeight = getCodeVisualHeight(height, codeType);
-        var barcodeBackgroundHeight = getBarcodeBackgroundHeight(barcodeHeight, codeType);
-        var barcodeWidth = width - (barcodeSideInset * 2);
-        var codeY = barcodeTop + barcodeBackgroundHeight + maxValue(8, height / 30);
-        codeY = clampMetaTextY(dc, height, codeY, metaFont);
-        log("[LH][1D] card store=" + card[:merchant] + " type=" + codeType + " code=" + card[:code]);
-
-        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, topTextY, titleFont, fitText(dc, card[:merchant], titleFont, width - (barcodeSideInset * 2)), Graphics.TEXT_JUSTIFY_CENTER);
-
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.fillRectangle(toInt(barcodeSideInset), toInt(barcodeTop), toInt(barcodeWidth), toInt(barcodeBackgroundHeight));
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-        drawBarcode(dc, barcodeSideInset, barcodeTop, barcodeWidth, barcodeHeight, card[:code], codeType);
-
-        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, codeY, metaFont, fitText(dc, formatBarcodeHumanReadable(card[:code], codeType), metaFont, width - (barcodeSideInset * 2)), Graphics.TEXT_JUSTIFY_CENTER);
-    }
-
-    private function drawQrCardScreen(dc, width, height, card) {
-        var titleFont = pickBodyFont(height);
-        var metaFont = Graphics.FONT_XTINY;
-        var sideInset = width * 0.12;
-        var titleY = height * 0.18;
-        var qrTop = height * 0.28;
-        var qrHeight = height * 0.48;
-        var qrWidth = width - (sideInset * 2);
-        var codeY = qrTop + qrHeight + maxValue(8, height / 36);
-        codeY = clampMetaTextY(dc, height, codeY, metaFont);
-        log("[LH][QR] card store=" + card[:merchant] + " code=" + card[:code]);
-
-        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, titleY, titleFont, fitText(dc, card[:merchant], titleFont, width - 28), Graphics.TEXT_JUSTIFY_CENTER);
-
-        _allowQrExpansion = false;
-        drawQrArea(dc, width, height, card, sideInset, qrTop, qrWidth, qrHeight, metaFont);
-
-        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, codeY, metaFont, fitText(dc, card[:code], metaFont, width - 24), Graphics.TEXT_JUSTIFY_CENTER);
-    }
-
-    private function drawPhoneCardScreen(dc, width, height, card) {
-        var titleFont = pickBodyFont(height);
-        var labelFont = Graphics.FONT_XTINY;
-        var phoneText = card[:code].toString();
-        var phoneFont = pickPhoneNumberFont(dc, phoneText, width - 32, height);
-        var titleY = height * 0.20;
-        var labelY = height * 0.42;
-        var phoneY = height * 0.56;
-        var hintY = clampMetaTextY(dc, height, phoneY + dc.getFontHeight(phoneFont) + 12, labelFont);
-
-        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, titleY, titleFont, fitText(dc, card[:merchant], titleFont, width - 28), Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(width / 2, labelY, labelFont, "Phone", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(width / 2, phoneY, phoneFont, fitText(dc, phoneText, phoneFont, width - 32), Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(width / 2, hintY, labelFont, fitText(dc, "Saved for quick access", labelFont, width - 28), Graphics.TEXT_JUSTIFY_CENTER);
-    }
-
     private function drawLegacyCardScreen(dc, width, height, card, codeType, isQrCard, isPhoneCard) {
         if (isQrCard) {
             drawLegacyQrCardScreen(dc, width, height, card);
@@ -619,34 +445,25 @@ class GarminCardsView extends WatchUi.View {
         drawLegacyBarcodeCardScreen(dc, width, height, card, codeType);
     }
 
-    private function drawFullscreenCardScreen(dc, width, height, card, codeType, isQrCard, isPhoneCard) {
-        if (isQrCard) {
-            drawFullscreenQrCardScreen(dc, width, height, card);
-            return;
-        }
-
-        if (isPhoneCard) {
-            drawFullscreenPhoneCardScreen(dc, width, height, card);
-            return;
-        }
-
-        drawFullscreenBarcodeCardScreen(dc, width, height, card, codeType);
-    }
-
     private function drawLegacyEmptyState(dc, width, height) {
-        var font = pickBodyFont(height);
+        var titleFont = Graphics.FONT_XTINY;
+        var bodyFont = pickBodyFont(height);
+
         dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, height * 0.50, font, "No cards", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width / 2, height * 0.20, titleFont, "LOYALTY HUB", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width / 2, height * 0.50, bodyFont, "No cards", Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function drawLegacyBarcodeCardScreen(dc, width, height, card, codeType) {
         var titleFont = pickBodyFont(height);
-        var titleY = height * 0.20;
-        var barcodeSideInset = getBarcodeInset(width, height, 8);
-        var barcodeTop = height * 0.34;
-        var barcodeHeight = getCodeVisualHeight(height, codeType);
+        var metaFont = Graphics.FONT_XTINY;
+        var titleY = maxValue(10, height * 0.12);
+        var barcodeSideInset = getBarcodeInset(width, height, 0);
+        var barcodeTop = height * 0.27;
+        var barcodeHeight = getFullscreenBarcodeHeight(height, codeType);
         var barcodeBackgroundHeight = getBarcodeBackgroundHeight(barcodeHeight, codeType);
         var barcodeWidth = width - (barcodeSideInset * 2);
+        var codeY = height * 0.84;
 
         dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
         dc.drawText(width / 2, titleY, titleFont, fitText(dc, card[:merchant], titleFont, width - (barcodeSideInset * 2)), Graphics.TEXT_JUSTIFY_CENTER);
@@ -655,6 +472,9 @@ class GarminCardsView extends WatchUi.View {
         dc.fillRectangle(toInt(barcodeSideInset), toInt(barcodeTop), toInt(barcodeWidth), toInt(barcodeBackgroundHeight));
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
         drawBarcode(dc, barcodeSideInset, barcodeTop, barcodeWidth, barcodeHeight, card[:code], codeType);
+
+        dc.setColor(getPrimaryTextColor(), Graphics.COLOR_BLACK);
+        dc.drawText(width / 2, codeY, metaFont, fitText(dc, formatBarcodeHumanReadable(card[:code], codeType), metaFont, width - (barcodeSideInset * 2)), Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function drawLegacyQrCardScreen(dc, width, height, card) {
@@ -684,22 +504,12 @@ class GarminCardsView extends WatchUi.View {
         dc.drawText(width / 2, valueY, valueFont, fitText(dc, value, valueFont, width - 24), Graphics.TEXT_JUSTIFY_CENTER);
     }
 
-    private function drawFullscreenBarcodeCardScreen(dc, width, height, card, codeType) {
-        var barcodeBandWidth = getFullscreenBarcodeBandWidth(width, height, codeType);
-        var barcodeLeft = maxValue(4, toInt((width - barcodeBandWidth) / 2));
-        var barcodeTopInset = getVisibleColumnInset(width, height, barcodeLeft, barcodeBandWidth, getFullscreenBarcodeInset(width, height, codeType));
-        var barcodeDrawHeight = height - (barcodeTopInset * 2);
-
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-        drawBarcode(dc, barcodeLeft, barcodeTopInset, barcodeBandWidth, barcodeDrawHeight, card[:code], codeType);
-    }
-
     private function drawFullscreenQrCardScreen(dc, width, height, card) {
         var titleFont = Graphics.FONT_XTINY;
         var titleY = maxValue(8, height * 0.08);
-        var qrTop = getFullscreenQrTop(width, height);
-        var qrHeight = getFullscreenQrHeight(width, height);
-        var sideInset = getVisibleBandInset(width, height, qrTop, qrHeight, getFullscreenQrSideInset(width, height));
+        var qrTop = height * 0.14;
+        var qrHeight = height * 0.74;
+        var sideInset = width * 0.04;
         var qrWidth = width - (sideInset * 2);
 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
@@ -707,48 +517,6 @@ class GarminCardsView extends WatchUi.View {
 
         _allowQrExpansion = true;
         drawQrArea(dc, width, height, card, sideInset, qrTop, qrWidth, qrHeight, Graphics.FONT_XTINY);
-    }
-
-    private function drawFullscreenPhoneCardScreen(dc, width, height, card) {
-        var titleFont = Graphics.FONT_XTINY;
-        var value = card[:code].toString();
-        var valueFont = pickPhoneNumberFont(dc, value, width - 24, height);
-        var titleY = maxValue(8, height * 0.08);
-        var valueY = height * 0.44;
-
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-        dc.drawText(width / 2, titleY, titleFont, fitText(dc, card[:merchant], titleFont, width - 24), Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(width / 2, valueY, valueFont, fitText(dc, value, valueFont, width - 24), Graphics.TEXT_JUSTIFY_CENTER);
-    }
-
-    private function drawCardIndicators(dc, width, height) {
-        if (_cards.size() <= 1) {
-            return;
-        }
-
-        var dotRadius = 3;
-        var gap = 10;
-        var totalHeight = (_cards.size() * (dotRadius * 2)) + ((_cards.size() - 1) * gap);
-        var startY = toInt((height - totalHeight) / 2);
-        var x = width - 16;
-
-        for (var i = 0; i < _cards.size(); i += 1) {
-            var y = startY + (i * ((dotRadius * 2) + gap));
-            var active = i == _currentIndex;
-            dc.setColor(active ? Graphics.COLOR_GREEN : Graphics.COLOR_DK_GRAY, Graphics.COLOR_BLACK);
-            dc.fillRectangle(x - dotRadius, y - dotRadius, dotRadius * 2, dotRadius * 2);
-        }
-    }
-
-    private function drawFooter(dc, width, height) {
-        var footerFont = Graphics.FONT_XTINY;
-        var progress = "0/0";
-        if (_cards.size() > 0) {
-            progress = (_currentIndex + 1).toString() + "/" + _cards.size().toString();
-        }
-
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        dc.drawText(width / 2, height * 0.92, footerFont, progress, Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function clampMetaTextY(dc, height, proposedY, font) {
@@ -891,16 +659,6 @@ class GarminCardsView extends WatchUi.View {
             return;
         }
 
-        if (_isCodeFullscreen) {
-            if (isGs1LinearType(renderType)) {
-                drawFullscreenGs1BarcodeRuns(dc, left, top, maxWidth, barHeight, runs, totalUnits, renderType);
-                return;
-            }
-
-            drawFullscreenBarcodeRuns(dc, left, top, maxWidth, barHeight, runs, totalUnits);
-            return;
-        }
-
         if (isGs1LinearType(renderType)) {
             drawGs1BarcodeRuns(dc, left, top, maxWidth, barHeight, runs, totalUnits, renderType);
             return;
@@ -977,41 +735,6 @@ class GarminCardsView extends WatchUi.View {
                 drawBarBlock(dc, currentX, toInt(top), maxValue(1, segmentWidth), bottom);
             }
 
-            consumedUnits = nextUnits;
-            drawBar = !drawBar;
-        }
-    }
-
-    private function drawFullscreenBarcodeRuns(dc, left, top, maxWidth, barHeight, runs, totalUnits) {
-        var availableHeight = maxValue(20, toInt(barHeight));
-        var startY = toInt(top);
-        var targetBottom = startY + availableHeight;
-        var currentY = startY;
-        var consumedUnits = 0;
-        var startX = toInt(left);
-        var right = maxValue(startX, toInt(left + maxWidth) - 1);
-        var drawBar = true;
-
-        for (var i = 0; i < runs.size(); i += 1) {
-            var nextUnits = consumedUnits + runs[i];
-            var nextY = startY + scaleBarcodeUnits(nextUnits, availableHeight, totalUnits);
-            if (i == (runs.size() - 1)) {
-                nextY = targetBottom;
-            } else {
-                nextY = minValue(targetBottom, maxValue(currentY, nextY));
-            }
-            var segmentHeight = nextY - currentY;
-
-            if (segmentHeight <= 0) {
-                segmentHeight = 1;
-                nextY = currentY + segmentHeight;
-            }
-
-            if (drawBar) {
-                drawHorizontalBarBlock(dc, startX, right, currentY, maxValue(1, segmentHeight));
-            }
-
-            currentY = nextY;
             consumedUnits = nextUnits;
             drawBar = !drawBar;
         }
@@ -1356,45 +1079,6 @@ class GarminCardsView extends WatchUi.View {
         }
     }
 
-    private function drawFullscreenGs1BarcodeRuns(dc, left, top, maxWidth, barHeight, runs, totalUnits, codeType) {
-        var availableHeight = maxValue(20, toInt(barHeight));
-        var startY = toInt(top);
-        var targetBottom = startY + availableHeight;
-        var currentY = startY;
-        var consumedUnits = 0;
-        var regularInset = getFullscreenGs1RegularInset(maxWidth);
-        var guardInset = getFullscreenGs1GuardInset(maxWidth);
-        var drawBar = true;
-
-        for (var i = 0; i < runs.size(); i += 1) {
-            var runUnits = runs[i];
-            var nextUnits = consumedUnits + runUnits;
-            var nextY = startY + scaleBarcodeUnits(nextUnits, availableHeight, totalUnits);
-            if (i == (runs.size() - 1)) {
-                nextY = targetBottom;
-            } else {
-                nextY = minValue(targetBottom, maxValue(currentY, nextY));
-            }
-            var segmentHeight = nextY - currentY;
-
-            if (segmentHeight <= 0) {
-                segmentHeight = 1;
-                nextY = currentY + segmentHeight;
-            }
-
-            if (drawBar) {
-                var inset = isGs1GuardBar(consumedUnits, nextUnits, codeType) ? guardInset : regularInset;
-                var barLeft = toInt(left + inset);
-                var barRight = toInt(left + maxWidth - inset) - 1;
-                drawHorizontalBarBlock(dc, barLeft, maxValue(barLeft, barRight), currentY, maxValue(1, segmentHeight));
-            }
-
-            currentY = nextY;
-            consumedUnits = nextUnits;
-            drawBar = !drawBar;
-        }
-    }
-
     private function isGs1LinearType(codeType) {
         return GarminCardsData.stringEquals(codeType, "EAN13") ||
                GarminCardsData.stringEquals(codeType, "UPCA") ||
@@ -1464,14 +1148,6 @@ class GarminCardsView extends WatchUi.View {
         return maxValue(6, toInt(availableSize * 0.02));
     }
 
-    private function getFullscreenGs1RegularInset(maxWidth) {
-        return maxValue(2, toInt(maxWidth * 0.04));
-    }
-
-    private function getFullscreenGs1GuardInset(maxWidth) {
-        return maxValue(0, toInt(maxWidth * 0.01));
-    }
-
     private function isGs1GuardBar(startUnits, endUnits, codeType) {
         if (GarminCardsData.stringEquals(codeType, "EAN8")) {
             return isUnitRangeInside(startUnits, endUnits, 0, 3) ||
@@ -1522,12 +1198,6 @@ class GarminCardsView extends WatchUi.View {
         }
     }
 
-    private function drawHorizontalBarBlock(dc, left, right, y, height) {
-        for (var dy = 0; dy < height; dy += 1) {
-            dc.drawLine(left, y + dy, right, y + dy);
-        }
-    }
-
     private function maxValue(a, b) {
         if (a > b) {
             return a;
@@ -1537,79 +1207,13 @@ class GarminCardsView extends WatchUi.View {
     }
 
     private function getBarcodeInset(width, height, extraPadding) {
-        var inset = (width / 14) + extraPadding;
+        var inset = (width / 26) + extraPadding;
 
         if (width < 220 || height < 220) {
-            inset = (width / 12) + extraPadding;
+            inset = (width / 22) + extraPadding;
         }
 
-        return toInt(maxValue(10, inset));
-    }
-
-    private function getFullscreenBarcodeInset(width, height, codeType) {
-        return maxValue(6, toInt(width * 0.06));
-    }
-
-    private function getFullscreenBarcodeBandWidth(width, height, codeType) {
-        var bandWidth = isGs1LinearType(codeType) ? (width * 0.56) : (width * 0.38);
-
-        if (width < 220 || height < 220) {
-            bandWidth = isGs1LinearType(codeType) ? (width * 0.50) : (width * 0.34);
-        }
-
-        return toInt(maxValue(32, bandWidth));
-    }
-
-    private function getFullscreenQrSideInset(width, height) {
-        return width * 0.04;
-    }
-
-    private function getFullscreenQrTop(width, height) {
-        return height * 0.14;
-    }
-
-    private function getFullscreenQrHeight(width, height) {
-        return height * 0.74;
-    }
-
-    private function getVisibleBandInset(width, height, top, bandHeight, minimumInset) {
-        var centerY = height / 2.0;
-        var radius = (minValue(width, height) / 2.0) - 2.0;
-        var topOffset = circleChordOffset(radius, absValue(top - centerY));
-        var bottomOffset = circleChordOffset(radius, absValue((top + bandHeight) - centerY));
-        var visibleOffset = minValue(topOffset, bottomOffset);
-        var geometryInset = toInt((width / 2.0) - visibleOffset);
-        var safetyInset = maxValue(2, toInt(width * 0.01));
-
-        return maxValue(toInt(minimumInset), geometryInset + safetyInset);
-    }
-
-    private function getVisibleColumnInset(width, height, left, bandWidth, minimumInset) {
-        var centerX = width / 2.0;
-        var radius = (minValue(width, height) / 2.0) - 2.0;
-        var leftOffset = circleChordOffset(radius, absValue(left - centerX));
-        var rightOffset = circleChordOffset(radius, absValue((left + bandWidth) - centerX));
-        var visibleOffset = minValue(leftOffset, rightOffset);
-        var geometryInset = toInt((height / 2.0) - visibleOffset);
-        var safetyInset = maxValue(2, toInt(height * 0.01));
-
-        return maxValue(toInt(minimumInset), geometryInset + safetyInset);
-    }
-
-    private function isPointInBarcodeArea(x, y, codeType) {
-        if (_lastWidth <= 0 || _lastHeight <= 0) {
-            return false;
-        }
-
-        var barcodeHeight = getCodeVisualHeight(_lastHeight, codeType);
-        var barcodeTop = _lastHeight * 0.35;
-        var barcodeSideInset = getFullscreenBarcodeInset(_lastWidth, _lastHeight, codeType);
-        var left = barcodeSideInset;
-        var right = _lastWidth - barcodeSideInset;
-        var top = barcodeTop;
-        var bottom = barcodeTop + barcodeHeight;
-
-        return x >= left && x <= right && y >= top && y <= bottom;
+        return toInt(maxValue(6, inset));
     }
 
     private function isPointInQrArea(x, y) {
@@ -1622,16 +1226,6 @@ class GarminCardsView extends WatchUi.View {
         var qrHeight = _lastHeight * 0.48;
 
         return x >= sideInset && x <= (_lastWidth - sideInset) && y >= qrTop && y <= (qrTop + qrHeight);
-    }
-
-    private function isPointInPhoneValueArea(x, y) {
-        if (_lastWidth <= 0 || _lastHeight <= 0) {
-            return false;
-        }
-
-        var valueTop = _lastHeight * 0.50;
-        var valueBottom = _lastHeight * 0.72;
-        return x >= (_lastWidth * 0.12) && x <= (_lastWidth * 0.88) && y >= valueTop && y <= valueBottom;
     }
 
     private function getCodeVisualHeight(height, codeType) {
@@ -1647,6 +1241,16 @@ class GarminCardsView extends WatchUi.View {
         }
 
         return toInt(maxValue(32, barcodeHeight));
+    }
+
+    private function getFullscreenBarcodeHeight(height, codeType) {
+        var barcodeHeight = height * 0.43;
+
+        if (isGs1LinearType(codeType)) {
+            barcodeHeight = height * 0.40;
+        }
+
+        return toInt(maxValue(52, barcodeHeight));
     }
 
     private function getBarcodeBackgroundHeight(barcodeHeight, codeType) {

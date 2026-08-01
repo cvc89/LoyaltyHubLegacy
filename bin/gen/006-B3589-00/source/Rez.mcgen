@@ -1,0 +1,25 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var ExampleQr as ResourceId;
+        (:initialized) var IconOk as ResourceId;
+        (:initialized) var MiniWidgetPic as ResourceId;
+        (:initialized) var MiniWidgetCenter as ResourceId;
+        (:initialized) var Mini240_72 as ResourceId;
+        (:initialized) var Mini320_76 as ResourceId;
+        (:initialized) var MiniWidgetPicFull as ResourceId;
+        (:initialized) var MiniFondo240_72 as ResourceId;
+        (:initialized) var MiniFondo320_76 as ResourceId;
+        (:initialized) var MiniFondo360_89 as ResourceId;
+        (:initialized) var LauncherIcon as ResourceId;
+    } // Drawables
+
+    module Strings {
+        (:initialized) var AppName as ResourceId;
+    } // Strings
+} // Rez

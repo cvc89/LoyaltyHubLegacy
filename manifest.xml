@@ -1,55 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iq:manifest version="3" xmlns:iq="http://www.garmin.com/xml/connectiq">
-    <iq:application id="0123456789abcdef0123456789abcd10" type="watch-app" name="@Strings.AppName" entry="GarminCardsApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="3.2.0">
+    <iq:application
+        id="0123456789abcdef0123456789abcd10"
+        type="watch-app"
+        name="@Strings.AppName"
+        entry="GarminCardsApp"
+        launcherIcon="@Drawables.LauncherIcon"
+        minApiLevel="3.2.0">
+
         <iq:products>
-    <!-- Serie Forerunner -->
-    <iq:product id="fr165"/>
-    <iq:product id="fr165m"/>
-    <iq:product id="fr255"/>
-    <iq:product id="fr255m"/>
-    <iq:product id="fr255s"/>
-    <iq:product id="fr255sm"/>
-    <iq:product id="fr265"/>
-    <iq:product id="fr265s"/>
-    <iq:product id="fr955"/>
-    <iq:product id="fr965"/>
 
-    <!-- Series fēnix, epix y Enduro -->
-    <iq:product id="fenix7"/>
-    <iq:product id="fenix7s"/>
-    <iq:product id="fenix7x"/>
-    <iq:product id="fenix7pro"/>
-    <iq:product id="fenix7spro"/>
-    <iq:product id="fenix7xpro"/>
-    <iq:product id="epix2"/>
-    <iq:product id="epix2pro_42mm"/>
-    <iq:product id="epix2pro_47mm"/>
-    <iq:product id="epix2pro_51mm"/>
-    <iq:product id="enduro3"/>
+            <!-- Forerunner (API ≥ 3.2.0) -->
+            <iq:product id="fr245"/>
+            <iq:product id="fr245m"/>
+            <iq:product id="fr255"/>
+            <iq:product id="fr255m"/>
+            <iq:product id="fr255s"/>
+            <iq:product id="fr255sm"/>
+            <iq:product id="fr265"/>
+            <iq:product id="fr265s"/>
+            <iq:product id="fr745"/>
+            <iq:product id="fr945"/>
+            <iq:product id="fr945lte"/>
+            <iq:product id="fr955"/>
+            <iq:product id="fr955solar"/>
+            <iq:product id="fr965"/>
 
-    <!-- Series Venu y vívoactive -->
-    <iq:product id="venu2"/>
-    <iq:product id="venu2s"/>
-    <iq:product id="venu2plus"/>
-    <iq:product id="venu3"/>
-    <iq:product id="venu3s"/>
-    <iq:product id="vivoactive5"/>
+            <!-- fēnix / tactix / quatix (API ≥ 3.2.0) -->
+            <iq:product id="fenix6"/>
+            <iq:product id="fenix6s"/>
+            <iq:product id="fenix6x"/>
+            <iq:product id="fenix7"/>
+            <iq:product id="fenix7s"/>
+            <iq:product id="fenix7x"/>
+            <iq:product id="fenix7pro"/>
+            <iq:product id="fenix7spro"/>
+            <iq:product id="fenix7xpro"/>
+            <iq:product id="tactix7"/>
+            <iq:product id="quatix6"/>
+            <iq:product id="quatix7"/>
+            <iq:product id="quatix7x"/>
+            <iq:product id="quatix7pro"/>
 
-    <!-- Serie MARQ (Gen 2) y Especializados -->
-    <iq:product id="marq2"/>
-    <iq:product id="marq2aviator"/>
-    <iq:product id="d2mach1"/>
-    <iq:product id="descentmk343mm"/>
-    <iq:product id="descentmk351mm"/>
-    <iq:product id="approachs7042mm"/>
-    <iq:product id="approachs7047mm"/>
-</iq:products>
+            <!-- epix / epix Pro (API ≥ 3.2.0) -->
+            <iq:product id="epix2"/>
+            <iq:product id="epix2pro_42mm"/>
+            <iq:product id="epix2pro_47mm"/>
+            <iq:product id="epix2pro_51mm"/>
+
+            <!-- Enduro (API ≥ 3.2.0) -->
+            <iq:product id="enduro"/>
+            <iq:product id="enduro2"/>
+            <iq:product id="enduro3"/>
+
+            <!-- Venu / vívoactive (API ≥ 3.2.0) -->
+            <iq:product id="venu2"/>
+            <iq:product id="venu2s"/>
+            <iq:product id="venu2plus"/>
+            <iq:product id="venu3"/>
+            <iq:product id="venu3s"/>
+            <iq:product id="vivoactive5"/>
+
+            <!-- MARQ (Gen 2) -->
+            <iq:product id="marq2"/>
+            <iq:product id="marq2aviator"/>
+
+            <!-- D2 (aviación) -->
+            <iq:product id="d2mach1"/>
+            <iq:product id="d2mach2"/>
+            <iq:product id="d2mach2pro"/>
+
+            <!-- Descent (buceo) -->
+            <iq:product id="descentmk2"/>
+            <iq:product id="descentmk2i"/>
+            <iq:product id="descentmk2s"/>
+            <iq:product id="descentmk343mm"/>
+            <iq:product id="descentmk351mm"/>
+
+            <!-- Approach (golf) -->
+            <iq:product id="approachs7042mm"/>
+            <iq:product id="approachs7047mm"/>
+
+        </iq:products>
+
         <iq:permissions>
             <iq:uses-permission id="UserProfile"/>
         </iq:permissions>
+
         <iq:languages>
             <iq:language>eng</iq:language>
         </iq:languages>
+
         <iq:barrels/>
+
     </iq:application>
 </iq:manifest>
