@@ -11,6 +11,18 @@ module GarminCardsData {
         return major != null && major >= 5;
     }
 
+    function isAmoledDisplay() {
+        try {
+            var settings = System.getDeviceSettings();
+            if (settings != null && (settings has :requiresBurnInProtection)) {
+                return settings.requiresBurnInProtection == true;
+            }
+        } catch(e) {
+        }
+
+        return false;
+    }
+
     function getMonkeyMajorVersion() {
         try {
             var settings = System.getDeviceSettings();

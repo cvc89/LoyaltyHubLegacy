@@ -1722,10 +1722,17 @@ class GarminCardsView extends WatchUi.View {
             return;
         }
 
+        var isAmoled = GarminCardsData.isAmoledDisplay();
+
         try {
             if (GarminCardsData.isCiq5OrNewer()) {
-                Attention.backlight(_isBrightnessMax ? 1.0 : 0.0);
+                Attention.backlight(_isBrightnessMax ? (isAmoled ? 0.5 : 1.0) : 0.0);
             } else {
+                if (_isBrightnessMax && isAmoled) {
+                    Attention.backlight(0.5);
+                    return;
+                }
+
                 Attention.backlight(_isBrightnessMax);
             }
         } catch(e) {
